@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {chapter}{Summary (English)}{i}{chapter*.1}
+\contentsline {chapter}{Summary (Danish)}{iii}{chapter*.2}
+\select@language {danish}
+\select@language {english}
+\contentsline {chapter}{Preface}{v}{chapter*.3}
+\contentsline {chapter}{Acknowledgements}{vii}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {A}Stuff}{3}{appendix.A}
