@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  12 MAR 2014 12:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  12 MAR 2014 13:58
 entering extended mode
 **Thesis.tex
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.tex
@@ -754,9 +754,9 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
  ) 
 Here is how much of TeX's memory you used:
- 8627 strings out of 493921
- 124860 string characters out of 3144842
- 212519 words of memory out of 3000000
+ 8628 strings out of 493921
+ 125055 string characters out of 3144842
+ 212495 words of memory out of 3000000
  11722 multiletter control sequences out of 15000+200000
  23492 words of font info for 63 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -774,9 +774,10 @@ s\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ecss0900.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
 r\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKT
 eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk>
-Output written on Thesis.pdf (16 pages, 129515 bytes).
+Output written on C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/bu
+ild/Thesis.pdf (16 pages, 130513 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
+ 403 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
  67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
