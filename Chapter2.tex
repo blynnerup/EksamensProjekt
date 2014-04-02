@@ -1,0 +1,46 @@
+\chapter{Algorithms in General}
+
+Considerations regarding pick of algorithms. 
+
+\textbf{Bag of Words (Cosine)}, generates a vector from each document.
+Another document can then be matched with the list of documents, and their vectors are compared based on the dot product. The closer the dot product are to the value 1.0 the more similar are two documents. A score of 0.0 indicates that two articles has nothing in common.
+
+\textbf{Problem:} This string comparison is very sensitive to short articles, for instance "A man walks his dog in the park" and "A dog walks his man in the park" would result in returning a cosine value of 1.0, due to the term vector. This problem is very unlikely to yield false positives.
+
+\textbf{Longest Common Substring (LCS)}, compares documents in pairs. A general implementation would be to have list of documents and then compare a document to each of the documents in the list. The algorithm will then return the length of the longest common substring. This would probably needed to be modified to return a percentage match in stead (total string length / longest common substring found).
+
+\textbf{Problem:} This algorithm is very prone to fail in cases where there have been made alterations to the article in question. A word change in the middle of one of two otherwise identical articles will result in a ~50 percent match. If the article in question have been obfuscated with many changed words, the LCS will be extremely short. This is a high risk problem, as article duplication will often involve changing words.
+
+
+\section{Optimizing Performance}
+\subsection{Stop Words}
+Stop word removal would improve running time (performance) of both algorithms, and would pose little threat of causing either algorithm to fail. The exception to this could be very short articles (like breaking news articles), that only contains common words, like "Man walks away". Depending on the stop word list, this article could end up being \textit{null}.
+We can safely (with respects to the previously addressed problem) remove stop words, as they don't provide any \textit{semantic} value to the text.
+
+\subsubsection{Cosine}
+For the cosine algorithm removal of stop words would improve performance, by reducing the size of the \textit{Magnitude Vector}. 
+
+\subsubsection{LCS}
+In regards to the LCS algorithm, the performance would also be improved, as the algorithm wouldn't need to traverse as many \textit{terms}. This would reduce the length of the longest common substring, but it would be unlikely that it would affect the outcome of the algorithm.
+
+\subsection{Stemming}
+\textit{Stemming} would can improve performance of the cosine algorithm. This would not affect accuracy as stemming does not ruin the semantic content.
+
+\subsubsection{Cosine}
+Stemming improves the performance of the cosine algorithm as this will reduce the number of words in the \textit{vector space}. As words would be reduced to their base form (Danish:\textit{Grundform}), words used several times, but with different endings would be counted as the same word. When using weighed evaluation this would actually improve performance.
+
+\subsubsection{LCS}
+Stemmning would not improve the performance of the LCS algorithm. As this algorithm matches terms one by one, it would make no difference if the words are stemmed or not. For LCS it would actually decrease performance to apply stemming, as this operation would consume time while preparing the files, with no impact of the algorithms actual performance.
+
+\section{Implementation of Stop Words and Stemming}
+For the algorithms tested removing stop words would be an improvement (\textbf{TEST!!!}), and would be valuable to do before using either algorithm.
+
+Stemming would should not be done when using the LCS algorithm as that has no performance enhancing impact on the LCS.
+
+\section{Semphore Tagging}
+
+Kig på semaphore tags? Samme artikel == samme tags?
+
+Duplikat problematik, internet nyheder - historien opdateres løbende, hvornår bliver det et plagiat? Er samme artikel, men alligevel ikke...
+
+
