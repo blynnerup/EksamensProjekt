@@ -4,4 +4,9 @@
 \BOOKMARK [0][]{chapter*.4}{Acknowledgements}{}% 4
 \BOOKMARK [0][]{toc.0}{Contents}{}% 5
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 6
-\BOOKMARK [0][]{appendix.A}{A Stuff}{}% 7
+\BOOKMARK [0][]{chapter.2}{2 Algorithms in General}{}% 7
+\BOOKMARK [1][]{section.2.1}{2.1 Optimizing Performance}{chapter.2}% 8
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Stop Words}{section.2.1}% 9
+\BOOKMARK [2][]{subsection.2.1.2}{2.1.2 Stemming}{section.2.1}% 10
+\BOOKMARK [1][]{section.2.2}{2.2 Implementation of Stop Words and Stemming}{chapter.2}% 11
+\BOOKMARK [0][]{appendix.A}{A Appendix}{}% 12
