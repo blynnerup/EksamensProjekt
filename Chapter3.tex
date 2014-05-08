@@ -1,0 +1,68 @@
+\chapter{Algorithms in General}
+
+Before any sort of work can be done, one must consider various algorithm to work with. There are several text matching algorithms available for free on the Internet, and if one has the money for it, there are companies that can develop a specialized algorithm for you. As I do not have a lot of money (and paying for someone else, to do an algorithm for me, kind of defeats the purpose of this whole thesis) I have gone with the first option and found a free basic algorithm on the Internet, as well as contemplated to create my own algorithm from scratch.
+
+\section{Initial Considerations}
+Infomedia already have an algorithm implemented in the inflow to make a rough comparison of the articles coming in. How ever, the thought is that a combination of several algorithms would provide a better and more granular view of the articles as they are being compared. A new algorithm should be one that was specialized in text matching. It should also be an algorithm that would work in different manner than what Infomedia already have implemented\footnote{More on the algorithm already implemented in the next section.}, as having two algorithms that work in more or less the same fashion would not produce results of much interest.
+
+As the current implementation is rather fast, it could prove useful to have the algorithm that is already implemented, to do the initial split and then have a slower (but more thorough) algorithm look at the \textit{interesting} article comparisons. Initially I have looked at two algorithms to fill this need, \textit{Longest Common Substring} and \textit{Semaphore Tag Matching} - an algorithm I would make from scratch.
+
+\section{Algorithms Used}
+
+\textbf{Term Frequency - Inverse Document Frequency\footnote{\url{http://en.wikipedia.org/wiki/Tf-idf}} (Cosine)}, generates a vector from each document. \textbf{I will not cover this algorithm in detail, as it is not the focus for my thesis.} This is the algorithm already implemented in the inflow today (a version of it). Each word in every article is added to a \textit{word map} which contains all the words of all articles in the corpus being checked (which also is used to create the document vector). The word map is used to generate a weight of each word (a word occurring in many articles will have less weight than a word that is only present in a few articles). Each word generates a bit of the articles total vector, a word that occurs in all documents will have a very short vector, a more rare word will have a longer (and therefore weigh heavier) in the article vector.
+
+
+Once the word map is created, the articles are then scored based on the words in the article and the word map. This score is a vector, which is used to compare the article with other articles. This is done one article at a time (although done with parallel coding to speed up the process). As the word map is generated each time the algorithm is run, the word map can (and probably will) differ from each run (if the corpus of articles are being changed). Infomedia is therefore talking about implementing this bit differently, and building a constant word map, that only gets updated with each run, not overwritten.
+
+The algorithm then returns a list of article comparisons (based on a threshold set by the user), with article ID\footnote{Each article has their own unique ID.} and scores. So each comparison has the ID of \textit{"article 1"} and \textit{"article 2"} and their score (the angle between the two vectors, in a multidimensional universe). The closer the score is to the value 1.0 the more similar are two articles. A score of 0.0 indicates that two articles has nothing in common (according to this algorithm, I will discuss this point in the next paragraph), whereas a score of 1.0 indicates two perfectly identical articles (according to this algorithm). This algorithm and it has a good O-notation (!!! N LOG N???? !!!).
+
+\textbf{Problem:} This string comparison is very sensitive to short articles, for instance "A man walks his dog in the park" and "A dog walks his man in the park" would result in returning a cosine value of 1.0, due to the term vector. This problem is very unlikely to yield false positives.
+
+\textbf{Longest Common Substring (LCS)}, compares documents in pairs as well. A general implementation would be to have a list of documents and then compare a document to every other document in the list. The algorithm will then return the length of the longest common substring. By default\footnote{\url{http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring}} the LCS algorithm checks the contents of a string character by character. When initialized the algorithm creates an double array, each time a match is found (when two equal characters are found ('a' and 'a' for instance)) the algorithm marks that in the array by adding a number. 
+
+!!!!!!!!!! BESKRIV LCS I DETALJER HER - BILLEDER!!!!!!
+
+I will use the basic implementation of this algorithm in my thesis, I will then try and modify it to work better in context with finding article duplicates, instead of just the longest common substring.
+
+\textbf{Problem:} This algorithm is very prone to fail in cases where there have been made alterations to the article in question. A word change in the middle of one of two otherwise identical articles will result in a ~50 \% match. If the article in question have been obfuscated with many changed words, the LCS will be extremely short. This is a high risk problem, as article duplication will often involve changing words.
+
+
+\section{Optimizing Performance}
+\subsection{Stop Words}
+Stop word\footnote{\url{http://en.wikipedia.org/wiki/Stop_words}} removal would improve running time (performance) of both algorithms, and would pose little threat of causing either algorithm to fail (finding false positives). The exception to this could be very short articles (like breaking news articles\footnote{Breaking News articles is a thing of the 2000s. With the spread of media onto the Internet, an article is no longer a static printed piece of news in a paper. News can be published instantly on the web, and then updated as information are received. How ever, Breaking News articles can still be printed in the paper article.}), that only contains common words, like "Man walks away". Depending on the stop word list, this article could end up being \textit{null\footnote{An article with no text data.}}.
+We can safely (with respects to the previously addressed problem) remove stop words, as they don't provide any \textit{semantic\footnote{\url{http://en.wikipedia.org/wiki/Semantics}}} value to the text.
+
+\subsubsection{Cosine}
+For the cosine algorithm removal of stop words would improve performance, by reducing the size of the \textit{Magnitude Vector}. How ever, as the algorithm already weighs words based on their number of occurrence, and stop words by nature occur often, this will have a minimal impact on performance.
+
+\subsubsection{LCS}
+In regards to the LCS algorithm, the performance would also be improved, as the algorithm wouldn't need to traverse as many characters. This would reduce the length of the longest common substring, but it would be unlikely that it would affect the outcome of the algorithm, as stop words are rarely changed when duplicating articles.
+
+\subsection{Stemming}
+\textit{Stemming}\footnote{\url{http://en.wikipedia.org/wiki/Stemming}} would improve performance of the cosine algorithm. This would not affect accuracy as stemming does not ruin the semantic content.
+
+\subsubsection{Cosine}
+Stemming improves the performance of the cosine algorithm as this will reduce the number of words in the \textit{vector space}. As words would be reduced to their base form (Danish:\textit{Grundform}), words used several times, but with different endings would be counted as the same word. When using weighed evaluation this would actually improve performance to some extend.
+
+\subsubsection{LCS}
+Stemming would not improve the performance of the LCS algorithm by much. As this algorithm matches characters one by one, it would make little difference if the words are stemmed or not. For LCS stemming could actually end up decreasing performance, as this operation would consume time while preparing the files, with no (or little) impact to the performance of the algorithm.
+
+\section{Semaphore Tagging}
+Another way of finding duplicates is by looking at each articles semaphore tags. When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of the article, an article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology\footnote{\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}} team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
+
+\subsection{Cons to Semaphore}
+As these tags are more a general indicator to an articles contents than an actual text matching algorithm, it will provide very little value as a stand alone implementation. Each article will only contain tags for the terms worth of note. If 100 articles all contained various doings of a minister (picking up the children, going to meetings, being involved in a crisis) many of the same tags would be present in the 100 articles, this could be the ministers name, political party and other general tags that are linked to this minister. It would therefore be hard to decipher much information that could truly and uniquely link two article together just by doing this.However this could be used to enhance another algorithm (for instance one of the two mentioned above). I will therefore not look any further into implementing this algorithm in this thesis.
+
+Belowthis should be a picture!
+\begin{figure}[hb]
+	\centering
+	\includegraphics[scale=1.0]{figures/JV-Lemvig}
+	\caption{TEXT!}
+\end{figure}
+
+
+
+
+
+
+
