@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.10)  16 APR 2014 22:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.10)  8 MAY 2014 14:25
 entering extended mode
 **Thesis.tex
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.tex
@@ -594,30 +594,31 @@ File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
 \c@lemma=\count126
 \c@example=\count127
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 39.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 39.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 39.
-Package hyperref Info: Option `plainpages' set `false' on input line 39.
+Package hyperref Info: Option `breaklinks' set `true' on input line 40.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 40.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 40.
+Package hyperref Info: Option `plainpages' set `false' on input line 40.
 
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.aux
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\ChapterIntroduction.aux)
-(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter1.aux)
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter2.aux)
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter3.aux)
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter4.aux)
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Appendix1.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (D:\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -637,7 +638,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 50.
+Package hyperref Info: Link coloring OFF on input line 51.
  (D:\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -647,24 +648,24 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 \c@section@level=\count134
 LaTeX Info: Redefining \Ref on input line 513.
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.out)
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.out)
 \@outlinefile=\write4
-LaTeX Info: Redefining \Ref on input line 50.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 54.
+LaTeX Info: Redefining \Ref on input line 51.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 55.
 
 (D:\MiKTeX\tex\latex\base\t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=59, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=71, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
-Package pdftex.def Info: figures/DTU-logo.pdf used on input line 54.
+Package pdftex.def Info: figures/DTU-logo.pdf used on input line 55.
 (pdftex.def)             Requested size: 77.97668pt x 113.74683pt.
  [1
 Non-PDF special ignored!
@@ -696,31 +697,34 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Preface.tex [3] [4
 
 ]
-<figures/SignatureDummy.jpg, id=94, 257.46187pt x 103.13531pt>
+<figures/SignatureDummy.jpg, id=106, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
-Package pdftex.def Info: figures/SignatureDummy.jpg used on input line 19.
+Package pdftex.def Info: figures/SignatureDummy.jpg used on input line 21.
 (pdftex.def)             Requested size: 128.7306pt x 51.56752pt.
-)
-(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Acknowledgements.tex [5 <C:/Us
-ers/Brian/Documents/GitHub/EksamensProjekt/figures/SignatureDummy.jpg>]
-[6
+ [5 <C:/Users/Brian/Documents/GitHub/EksamensProjekt/figures/SignatureDummy.jpg
+>])
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Acknowledgements.tex [6])
+[7
 
-]) [7] [8] (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.toc)
+] [8] (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.toc)
 \tf@toc=\write5
-
-[9
-
-] [10
+ [9
 
 ]
-(C:\Users\Brian\Documents\GitHub\EksamensProjekt\ChapterIntroduction.tex
+[10
+
+] (C:\Users\Brian\Documents\GitHub\EksamensProjekt\ChapterIntroduction.tex
 Chapter 1.
-[1
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2.
+(D:\MiKTeX\tex\latex\base\t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1
 
 
-]) [2] (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter1.tex
+]) [2]
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter2.tex
 Chapter 2.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
 (D:\MiKTeX\tex\latex\base\omscmr.fd
@@ -733,77 +737,92 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 
 ] [4]
-(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter2.tex
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter3.tex
 Chapter 3.
 [5
 
 
 
 ] [6]
-Overfull \hbox (1.92818pt too wide) in paragraph at lines 35--35
-[]\T1/cmr/bx/n/14.4 Implementation of Stop Words and Stem-ming 
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[][][][]$\T1/cmtt/m/n/8 http : / / en . wikibooks . org / wiki / Algorithm _ Im
+plementation / Strings / Longest _ common _$
  []
 
+[7] [8] <figures/JV-Lemvig.jpg, id=252, 303.38344pt x 303.38344pt>
+File: figures/JV-Lemvig.jpg Graphic file (type jpg)
 
-Overfull \hbox (18.05307pt too wide) in paragraph at lines 36--37
-\T1/cmr/m/n/10 For the al-go-rithms tested re-mov-ing stop words would be an im
--prove-ment (\T1/cmr/bx/n/10 TEST!!!\T1/cmr/m/n/10 ),
- []
+<use figures/JV-Lemvig.jpg>
+Package pdftex.def Info: figures/JV-Lemvig.jpg used on input line 59.
+(pdftex.def)             Requested size: 303.38269pt x 303.38269pt.
+ [9]) [10 <C:/Users/Brian/Documents/GitHub/EksamensProjekt/figures/JV-Lemvig.jp
+g>]
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter4.tex
+Chapter 4.
+) [11
 
-) [7] (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Appendix1.tex [8
+
+
+] (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Appendix1.tex [12
 
 
 
 ]
 Appendix A.
-) [9] [10
+) [13] [14
 
 
 ]
 No file Thesis.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Thesis.aux
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\ChapterIntroduction.aux)
-(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter1.aux)
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter2.aux)
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter3.aux)
+(C:\Users\Brian\Documents\GitHub\EksamensProjekt\Chapter4.aux)
 (C:\Users\Brian\Documents\GitHub\EksamensProjekt\Appendix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E11EDBC4CBB1137047B2B83053DCFA7A;828.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
+(rerunfilecheck)             Checksum: DAB5EC42A4FCC7082DF3F6CF42C29AF7;1001.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 8735 strings out of 493921
- 123138 string characters out of 3154499
- 215289 words of memory out of 3000000
- 11770 multiletter control sequences out of 15000+200000
- 32107 words of font info for 84 fonts, out of 3000000 for 9000
+ 8795 strings out of 493921
+ 124536 string characters out of 3154499
+ 216698 words of memory out of 3000000
+ 11797 multiletter control sequences out of 15000+200000
+ 33106 words of font info for 86 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,11n,45p,1182b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbx1200.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1440.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Brian\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Brian\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Brian\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2488.pk> <C:\Us
-ers\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.
-pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecbx1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
-\ec\dpi600\ecsx1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Brian\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\Brian\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0900.pk> <C:\Users\Brian
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\U
-sers\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074
-.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Thesis.pdf (22 pages, 219083 bytes).
+ 43i,12n,45p,1322b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
+ist, replaced by a fixed one
+
+ <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+ti0800.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecbx1200.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecbx1440.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Brian\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk> <C:\Users\Brian\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\User
+s\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
+> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+crm2488.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\eccc1200.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecsx1000.pk> <C:\Users\Brian\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Brian\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Brian\A
+ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Use
+rs\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0900.p
+k> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecss1728.pk> <C:\Users\Brian\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecsx2074.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Thesis.pdf (26 pages, 289874 bytes).
 PDF statistics:
- 707 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 867 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
