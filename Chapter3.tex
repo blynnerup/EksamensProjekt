@@ -14,17 +14,21 @@ As the current implementation is rather fast, it could prove useful to have the 
 
 Once the word map is created, the articles are then scored based on the words in the article and the word map. This score is a vector, which is used to compare the article with other articles. This is done one article at a time (although done with parallel coding to speed up the process). As the word map is generated each time the algorithm is run, the word map can (and probably will) differ from each run (if the corpus of articles are being changed). Infomedia is therefore talking about implementing this bit differently, and building a constant word map, that only gets updated with each run, not overwritten.
 
-The algorithm then returns a list of article comparisons (based on a threshold set by the user), with article ID\footnote{Each article has their own unique ID.} and scores. So each comparison has the ID of \textit{"article 1"} and \textit{"article 2"} and their score (the angle between the two vectors, in a multidimensional universe). The closer the score is to the value 1.0 the more similar are two articles. A score of 0.0 indicates that two articles has nothing in common (according to this algorithm, I will discuss this point in the next paragraph), whereas a score of 1.0 indicates two perfectly identical articles (according to this algorithm). This algorithm and it has a good O-notation (!!! N LOG N???? !!!).
+The algorithm then returns a list of article comparisons (based on a threshold set by the user), with article ID\footnote{Each article has their own unique ID.} and scores. So each comparison has the ID of \textit{"article 1"} and \textit{"article 2"} and their score (the angle between the two vectors, in a multidimensional universe). The closer the score is to the value 1.0 the more similar are two articles. A score of 0.0 indicates that two articles has nothing in common (according to this algorithm, I will discuss this point in the next paragraph), whereas a score of 1.0 indicates two perfectly identical articles (according to this algorithm). This algorithm and it has a good O-notation (O(log N)).
 
 \textbf{Problem:} This string comparison is very sensitive to short articles, for instance "A man walks his dog in the park" and "A dog walks his man in the park" would result in returning a cosine value of 1.0, due to the term vector. This problem is very unlikely to yield false positives.
 
-\textbf{Longest Common Substring (LCS)}, compares documents in pairs as well. A general implementation would be to have a list of documents and then compare a document to every other document in the list. The algorithm will then return the length of the longest common substring. By default\footnote{\url{http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring}} the LCS algorithm checks the contents of a string character by character. When initialized the algorithm creates an double array, each time a match is found (when two identical characters are found ('a' and 'a' for instance)) the algorithm marks that in the array by adding a number. 
+\textbf{Longest Common Substring (LCS)}, compares documents in pairs. A general implementation would be to have a list of documents and then compare a document to every other document in the list. The algorithm will then return the length of the longest common substring. By default\footnote{\url{http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_substring}} the LCS algorithm checks the contents of a string character by character against another string. When initialized the algorithm creates an double array, each time a match is found (when two identical characters are found ('a' and 'a' for instance)) the algorithm marks that in the array by adding a number. It then checks if this substring is longer than what has previous been found, if so, it discards the old substring and keeps the newly found.
 
-!!!!!!!!!! BESKRIV LCS I DETALJER HER - BILLEDER!!!!!!
+\begin{figure}[hb]
+	\centering
+	\includegraphics[scale=0.75]{figures/LcsExplained}
+	\caption{An example of how two words are compared in LCS. The fields in yellow are the two words broken into characters ('Skøntrum' and 'Skønnerum'). The fields in blue indicates when LCS finds a match, the number indicates the length of the substring. In this case, LCS finds three sub strings:'skøn', 'n' and 'rum', the longest of the three is the first, and this will be the result that LCS returns to the user. }
+\end{figure}
 
 I will use the basic implementation of this algorithm in my thesis, I will then try and modify it to work better in context with finding article duplicates, instead of just the longest common substring.
 
-\textbf{Problem:} This algorithm is very prone to fail in cases where there have been made alterations to the article in question. A word change in the middle of one of two otherwise identical articles will result in a ~50 \% match. If the article in question have been obfuscated with many changed words, the LCS will be extremely short. This is a high risk problem, as article duplication will often involve changing words.
+\textbf{Problem:} This algorithm is very prone to fail in cases where there have been made alterations to the article in question. A word change in the middle of one of two otherwise identical articles will result in a ~50 \% match. If the article in question have been obfuscated with many changed words, the LCS will be extremely short. This is a high risk problem, as article duplication will often involve changing words. This algorithm is also substantially slower than the Cosine algorithm, having an O-notation of O(n*m).
 
 
 \section{Optimizing Performance}
@@ -33,32 +37,46 @@ Stop word\footnote{\url{http://en.wikipedia.org/wiki/Stop_words}} removal would 
 We can safely (with respects to the previously addressed problem) remove stop words, as they don't provide any \textit{semantic\footnote{\url{http://en.wikipedia.org/wiki/Semantics}}} value to the text.
 
 \subsubsection{Cosine}
-For the cosine algorithm removal of stop words would improve performance, by reducing the size of the \textit{Magnitude Vector}. How ever, as the algorithm already weighs words based on their number of occurrence, and stop words by nature occur often, this will have a minimal impact on performance.
+For the cosine algorithm removal of stop words would improve performance, by reducing the size of the \textit{Magnitude Vector}. 
 
 \subsubsection{LCS}
 In regards to the LCS algorithm, the performance would also be improved, as the algorithm wouldn't need to traverse as many characters. This would reduce the length of the longest common substring, but it would be unlikely that it would affect the outcome of the algorithm, as stop words are rarely changed when duplicating articles.
 
 \subsection{Stemming}
-\textit{Stemming}\footnote{\url{http://en.wikipedia.org/wiki/Stemming}} would improve performance of the cosine algorithm. This would not affect accuracy as stemming does not ruin the semantic content.
+\textit{Stemming}\footnote{\url{http://en.wikipedia.org/wiki/Stemming}} Stemming is the act of conjugating a word to the base form (Danish:\textit{'Grundform'}). It is done in order to reduce the amount of noise in a text. Words will then be conjugated and instead of having the same word represented several time in different conjugations they will all be noted as the same word. Stemming does not ruin the semantic content of the text.
 
 \subsubsection{Cosine}
-Stemming improves the performance of the cosine algorithm as this will reduce the number of words in the \textit{vector space}. As words would be reduced to their base form (Danish:\textit{Grundform}), words used several times, but with different endings would be counted as the same word. When using weighed evaluation this would actually improve performance to some extend.
+Stemming improves the performance of the cosine algorithm as this will reduce the number of words in the \textit{vector space}. As words would be reduced to their base form (Danish:\textit{Grundform}), words used several times, but with different endings would be counted as the same word. When using weighed evaluation this would actually improve performance to some extend. It can have a slight impact of the Cosine algorithm. This is because that without stemming the same word can occur several times in a text in different conjugations, and thus each conjugation would have a larger vector than when the conjugations are all counted as the same word. This impact will be minimal because the rare words are still occurring less often than normal words (stop words).
 
 \subsubsection{LCS}
-Stemming would not improve the performance of the LCS algorithm by much. As this algorithm matches characters one by one, it would make little difference if the words are stemmed or not. For LCS stemming could actually end up decreasing performance, as this operation would consume time while preparing the files, with no (or little) impact to the performance of the algorithm.
+Stemming would not improve the performance of the LCS algorithm by much. As this algorithm matches characters one by one, it would make little difference if the words are stemmed or not. As the 'Grundform' is the shortest form of a word in Danish, it will make a slight difference, but this is hardly worth noting.
 
 \section{Semaphore Tagging}
-Another way of finding duplicates is by looking at each articles semaphore tags. When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of the article, an article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology\footnote{\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}} team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
+Another way of finding duplicates is by looking at each articles semaphore tags. When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of the article, an article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology (\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}) team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
 
 \subsection{Cons to Semaphore}
 As these tags are more a general indicator to an articles contents than an actual text matching algorithm, it will provide very little value as a stand alone implementation. Each article will only contain tags for the terms worth of note. If 100 articles all contained various doings of a minister (picking up the children, going to meetings, being involved in a crisis) many of the same tags would be present in the 100 articles, this could be the ministers name, political party and other general tags that are linked to this minister. It would therefore be hard to decipher much information that could truly and uniquely link two articles together just by doing this. However this could be used to enhance another algorithm (for instance one of the two mentioned above). I will therefore not look any further into implementing this algorithm in this thesis.
 
-Belowthis should be a picture!
-\begin{figure}[hb]
-	\centering
-	\includegraphics[scale=1.0]{figures/JV-Lemvig}
-	\caption{TEXT!}
-\end{figure}
+\section{Text Preparation}
+To reduce the chance of the algorithms failing in detecting duplicates, the text should be 'normalized'. As there are quite a few pitfalls in text analysis, one should try and take as many precautions as possible. A common source of error is common spelling errors, I will not check my article for spelling errors. These can have a rather big impact on the LCS algorithm. However as all text editors today have spell checking, this will be a tiny error source.
+
+Another problem with text analysis is localized spelling. An example of this can be the Swedish town of Malmö. The issue here being the 'ö' letter which is in the Swedish alphabet. This town's name can be spelled in a few different ways.
+
+\pagebreak
+
+\begin{itemize}
+\item Malmö (Swedish spelling)
+\item Malmø (Danish and Norwegian spelling)
+\item Malmo (English spelling)
+\end{itemize}
+
+The same article could be in different newspapers, but with different spelling of the word. All words, or rather words containing special characters (non English characters) should therefore be normalized. In this case, the character 'ö' could be normalized into the letter 'o'. I will in this thesis not normalize text, but accept that minor deviance in scores can occur due to this.
+
+Stemming is another good way of normalizing text, I have already covered this topic in a previous section, and will not cover this more in detail here. I have not used stemming in this thesis.
+
+Stop words will reduce the number of words in an article, and with less words, there are less error margin in terms of spelling errors. As stop words have little meaning when trying to figure out if two articles match, it is a good idea to remove these. I will in this thesis remove stop words\footnote{Danish - 912 most frequent words.txt - file included in the appendixes} to see if this have any effect. 
+
+
 
 
 
