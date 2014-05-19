@@ -1,11 +1,35 @@
 \chapter{General - Terms and Rules}
+
+I will in this chapter cover the essentials of the expressions and terms used throughout this thesis.
+
+\section{Terms}
+
 As there is a lot of terms used in this thesis, a short introduction to the most used are in order.
 \begin{itemize}
 \item \textbf{Article:} For this thesis, a digital document containing the contents of a piece of news. Could originate from papers, magazines, TV or other forms of media. For this thesis a document corresponds to an article. Articles are in their electronic form stored at Infomedia as XML files, I will throughout this thesis only deal with the part of the XML files that contains data of value to me in this assignment. This being \textit{Tags} (see below), \textit{Headline}, \textit{Sub headline} and \textit{Article Text}.
 \item \textbf{Corpus:} From Latin meaning \textit{body}. In this thesis that describes the test set of articles being used a test set throughout my thesis.
+\item \textbf{Monitoring:} In relation to the news monitoring (news surveillance) that Infomedia does, is the act of collecting news that holds information of value to our customers.
 \item \textbf{Tag:} Used in Ontology\footnote{\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}} to create words that describes the contents of an article.
 \item \textbf{Term:} Basically a word. A term will be something that can be searched for.
 \end{itemize}
+
+\section{Matching}
+I will in this thesis talk about false and true positives and negatives. A match will mean that two articles to some extend have the same content.
+
+\begin{itemize}
+\item \textbf{False Positive:} When an algorithm wrongfully identifies two articles as a match.
+\item \textbf{False Negative:} When an algorithm wrongfully identifies two articles as not being a match, when in fact they are a match.
+\item \textbf{True Positive:} When an algorithm correctly identifies two articles as a match.
+\item \textbf{True Negative:} When an algorithm correctly identifies two articles as not being a match.
+\end{itemize}
+
+
+\section{Duplicates}
+In this thesis I will often use the term 'duplicates' or 'match' about article comparisons. A duplication (match) can be an article that has been taken directly from a news feed and posted in a newspaper. Many local newspapers is owned by larger newspapers, and they will often receive articles from their owning paper. They will then print this in their own paper. Sometimes they will only use parts of the article and this will also be considered a duplicate for this thesis. As such duplication in this thesis is a way of describing how similar two articles are, rather than saying different papers are doing conscious fraud. That is a matter for another thesis.
+
+\subsection{Topic Matching}
+When looking at article matching, there is also the possibility of having articles score pretty well by the algorithms because they are dealing with the same topic. There are cases where the article have been heavily modified, and then there would be no basis to talk about duplication, then one could talk about topic matching. The article no longer contains the same phrases, but deals with the same topic.
+Of course two articles could describe the same topic, but never have been related to begin with. I will not try and dissect whether this is the case, only try and indicate when I find two articles that are dealing with the same topic, and mark them as such. 
 
 Hvornår er en artikel et duplikat (korte artikler (breaking news), hvornår er to artikler "tilstrækkeligt" forskellige?)
 blah about copyright rules in Denmark...

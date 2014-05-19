@@ -23,6 +23,8 @@
 % PACKAGES
 %==================================================================================================
 \usepackage{LukeThesis}                             %Import Thesis base style
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
 \usepackage{hyperref}
 %input{PhDMacros}                                   %Thesis specific macros
 %
@@ -34,9 +36,9 @@
 \def\thesishandin{09-June}                          %Submission date (Day-Month}
 \def\thesisdegree{B.Eng}                            %Degree ('B.Eng', 'B.Sc.', 'M.Sc.' or 'PhD')
 \def\thesisyear{2014}                               %Submission year
-\def\thesisnumber{????}                                 %DTU-IMM Serial number (do not include year)
+\def\thesisnumber{????}                             %DTU-IMM Serial number (do not include year)
 \def\thesisISSN{0000-0000}                          %ISSN number
-\def\thesiskeywords{Article Duplicates}  %PDF keywords
+\def\thesiskeywords{Article Duplicates}  			%PDF keywords
 \derivethesisprops                                  %Derive dependent properties
 %
 %==================================================================================================
@@ -96,6 +98,6 @@
 \sectionmark{Bibliography}
 \addcontentsline{toc}{chapter}{Bibliography}        %Force addition of Bibliography to TOC
 \bibliographystyle{alpha}                           %Use alpha codes for references
-\bibliography{References}                           %Bibliography file called
+\bibliography{Refs}                          		%Bibliography file called
 \end{document}
 % % % EOF % % %

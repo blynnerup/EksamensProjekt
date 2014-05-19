@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  12 MAY 2014 15:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  19 MAY 2014 15:14
 entering extended mode
 **Thesis.tex
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.tex
@@ -610,11 +610,9 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 40.
 Package hyperref Info: Option `plainpages' set `false' on input line 40.
 
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.aux
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\ChapterIntrod
-uction.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Chapter2.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Chapter3.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Chapter4.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ChapterIntroduction
+.aux) (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter2.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter3.aux)
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
@@ -672,7 +670,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 55.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=71, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=91, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
@@ -709,7 +707,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Preface.tex
 [3] [4
 
-] <figures/SignatureDummy.jpg, id=106, 257.46187pt x 103.13531pt>
+] <figures/SignatureDummy.jpg, id=126, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
@@ -735,112 +733,140 @@ Chapter 1.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [1
+)
+Overfull \hbox (51.15129pt too wide) in paragraph at lines 8--8
+[][][][]$\T1/cmtt/m/n/8 http : / / www . altinget . dk / eu / artikel / messers
+chmidt-[]ja-[]partierne-[]taler-[]vaelgerne-[]efter-[]munden$[]| 
+ []
 
 
-]) [2]
+Overfull \hbox (191.86705pt too wide) in paragraph at lines 8--8
+[][][][]$\T1/cmtt/m/n/8 http : / / www . infomedia . dk / viden-[]indsigt / eur
+opaparlamentsvalg-[]og-[]patentdomstolsafstemning-[]kandidaternes-[]synlighed-[
+]i-[]medierne/$[]| 
+ []
+
+
+LaTeX Warning: Citation `EuropaValg' on page 1 undefined on input line 8.
+
+[1
+
+
+] [2]) [3]
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter2.tex
+[4
+
+
+
+]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
-) [3
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
+ [5] [6])
+[7] (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter3.tex
+[8
 
 
 
-] [4]
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter3.tex
+]
 Chapter 3.
-[5
+[9]
 
+LaTeX Warning: Citation `Ocean' on page 10 undefined on input line 13.
 
-
-] [6]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 21--21
 [][][][]$\T1/cmtt/m/n/8 http : / / en . wikibooks . org / wiki / Algorithm _ Im
 plementation / Strings / Longest _ common _$
  []
 
-<figures/LcsExplained.jpg, id=221, 434.37282pt x 151.3153pt>
+<figures/LcsExplained.jpg, id=272, 434.37282pt x 151.3153pt>
 File: figures/LcsExplained.jpg Graphic file (type jpg)
 
 <use figures/LcsExplained.jpg>
 Package pdftex.def Info: figures/LcsExplained.jpg used on input line 25.
 (pdftex.def)             Requested size: 325.77881pt x 113.48619pt.
- [7 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/LcsExpl
-ained.jpg>] [8] [9]
-Underfull \vbox (badness 1466) has occurred while \output is active []
+ [11 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/LcsExp
+lained.jpg>]
+Underfull \vbox (badness 1009) has occurred while \output is active []
 
- [10])
-[11] (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.tex
-[12
+ [12]
+[13] [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-]
+ [15])
+[16] (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.tex
 Appendix A.
-) [13] [14
+) [17
+
+
+
+] [18
 
 
 ]
-No file Thesis.bbl.
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Thesis.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+
+[19
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.aux
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\ChapterIntrod
-uction.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Chapter2.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Chapter3.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\build\Chapter4.aux)
+ (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.aux
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ChapterIntroduction
+.aux) (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter2.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter3.aux)
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DAB5EC42A4FCC7082DF3F6CF42C29AF7;1001.
+(rerunfilecheck)             Checksum: 46F2062DE23E418304BCA0B577385147;1331.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 8795 strings out of 493921
- 128654 string characters out of 3144842
- 215698 words of memory out of 3000000
- 11797 multiletter control sequences out of 15000+200000
+ 8812 strings out of 493921
+ 128639 string characters out of 3144842
+ 217272 words of memory out of 3000000
+ 11803 multiletter control sequences out of 15000+200000
  33106 words of font info for 86 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,45p,1324b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist
-, replaced by a fixed one
-
- <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecti0800.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Brian.L.Pedersen\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Brian
-.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti100
-0.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm0800.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk> <C:\Users\Brian.L.Pedersen\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\
-Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
-rm0700.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecrm2488.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Brian.L.Pedersen
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\U
-sers\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecsx1000.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Brian.L.Ped
-ersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> 
-<C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecss0900.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\Brian.L.Pedersen\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+ 43i,12n,45p,1322b,407s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecti0800.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Brian.L.Pedersen\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Bri
+an.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0
+800.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ectt0800.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Brian.L.Pedersen\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\User
+s\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecrm0700.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm2488.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Brian.L.Peders
+en\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:
+\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecsx1000.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Brian.L.Pedersen\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Brian.L.P
+edersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk
+> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecss0900.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\Brian.L.Pedersen\AppData\
+Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/bu
-ild/Thesis.pdf (26 pages, 311761 bytes).
+ild/Thesis.pdf (31 pages, 333036 bytes).
 PDF statistics:
- 874 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 957 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
