@@ -23,9 +23,13 @@
 % PACKAGES
 %==================================================================================================
 \usepackage{LukeThesis}                             %Import Thesis base style
+\usepackage{rotating}
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
 %input{PhDMacros}                                   %Thesis specific macros
 %
 %==================================================================================================
@@ -87,8 +91,10 @@
 \include{ChapterIntroduction}						%Chapter Introduction                             
 \include{Chapter2} 									%Chapter 2
 \include{Chapter3}                               	%Chapter 3
+\include{Implementation}
 \appendix	
 \include{Appendix1}                                 %Appendix A
+\include{ArticleContent}
 %-----------
 % Backmatter
 %-----------

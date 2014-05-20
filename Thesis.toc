@@ -6,24 +6,31 @@
 \contentsline {chapter}{Preface}{v}{chapter*.3}
 \contentsline {chapter}{Acknowledgements}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Limitation}{3}{section.1.1}
+\contentsline {section}{\numberline {1.1}Thesis Statement}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Limitation}{3}{section.1.2}
 \contentsline {chapter}{\numberline {2}General - Terms and Rules}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Terms}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Matching}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Duplicates}{6}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Topic Matching}{7}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Algorithms in General}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Initial Considerations}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Algorithms Used}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Optimizing Performance}{12}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Stop Words}{12}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Cosine}{12}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}LCS}{13}{subsubsection.3.3.1.2}
-\contentsline {subsection}{\numberline {3.3.2}Stemming}{13}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Cosine}{13}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}LCS}{13}{subsubsection.3.3.2.2}
-\contentsline {section}{\numberline {3.4}Semaphore Tagging}{14}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Cons to Semaphore}{14}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Text Preparation}{15}{section.3.5}
-\contentsline {chapter}{\numberline {A}Appendix}{17}{appendix.A}
-\contentsline {chapter}{Bibliography}{19}{appendix.A}
+\contentsline {chapter}{\numberline {3}Analysis}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Algorithms in General}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Requirements Analysis}{9}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Initial Considerations}{10}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}System Architecture}{10}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Algorithms Used}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Optimizing Performance}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Stop Words}{15}{subsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Cosine}{15}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.2}LCS}{15}{subsubsection.3.4.1.2}
+\contentsline {subsection}{\numberline {3.4.2}Stemming}{15}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Cosine}{16}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}LCS}{16}{subsubsection.3.4.2.2}
+\contentsline {section}{\numberline {3.5}Semaphore Tagging}{16}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Cons to Semaphore}{17}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Text Preparation}{17}{section.3.6}
+\contentsline {section}{\numberline {3.7}Technology}{19}{section.3.7}
+\contentsline {chapter}{\numberline {4}Implementation}{21}{chapter.4}
+\contentsline {chapter}{\numberline {A}Appendix}{25}{appendix.A}
+\contentsline {chapter}{\numberline {B}Article Content}{27}{appendix.B}
+\contentsline {chapter}{Bibliography}{29}{appendix.B}

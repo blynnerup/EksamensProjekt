@@ -4,20 +4,27 @@
 \BOOKMARK [0][]{chapter*.4}{Acknowledgements}{}% 4
 \BOOKMARK [0][]{toc.0}{Contents}{}% 5
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 6
-\BOOKMARK [1][]{section.1.1}{1.1 Limitation}{chapter.1}% 7
-\BOOKMARK [0][]{chapter.2}{2 General - Terms and Rules}{}% 8
-\BOOKMARK [1][]{section.2.1}{2.1 Terms}{chapter.2}% 9
-\BOOKMARK [1][]{section.2.2}{2.2 Matching}{chapter.2}% 10
-\BOOKMARK [1][]{section.2.3}{2.3 Duplicates}{chapter.2}% 11
-\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Topic Matching}{section.2.3}% 12
-\BOOKMARK [0][]{chapter.3}{3 Algorithms in General}{}% 13
-\BOOKMARK [1][]{section.3.1}{3.1 Initial Considerations}{chapter.3}% 14
-\BOOKMARK [1][]{section.3.2}{3.2 Algorithms Used}{chapter.3}% 15
-\BOOKMARK [1][]{section.3.3}{3.3 Optimizing Performance}{chapter.3}% 16
-\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Stop Words}{section.3.3}% 17
-\BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Stemming}{section.3.3}% 18
-\BOOKMARK [1][]{section.3.4}{3.4 Semaphore Tagging}{chapter.3}% 19
-\BOOKMARK [2][]{subsection.3.4.1}{3.4.1 Cons to Semaphore}{section.3.4}% 20
-\BOOKMARK [1][]{section.3.5}{3.5 Text Preparation}{chapter.3}% 21
-\BOOKMARK [0][]{appendix.A}{A Appendix}{}% 22
-\BOOKMARK [0][]{appendix.A}{Bibliography}{}% 23
+\BOOKMARK [1][]{section.1.1}{1.1 Thesis Statement}{chapter.1}% 7
+\BOOKMARK [1][]{section.1.2}{1.2 Limitation}{chapter.1}% 8
+\BOOKMARK [0][]{chapter.2}{2 General - Terms and Rules}{}% 9
+\BOOKMARK [1][]{section.2.1}{2.1 Terms}{chapter.2}% 10
+\BOOKMARK [1][]{section.2.2}{2.2 Matching}{chapter.2}% 11
+\BOOKMARK [1][]{section.2.3}{2.3 Duplicates}{chapter.2}% 12
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Topic Matching}{section.2.3}% 13
+\BOOKMARK [0][]{chapter.3}{3 Analysis}{}% 14
+\BOOKMARK [1][]{section.3.1}{3.1 Algorithms in General}{chapter.3}% 15
+\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Requirements Analysis}{section.3.1}% 16
+\BOOKMARK [1][]{section.3.2}{3.2 Initial Considerations}{chapter.3}% 17
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 System Architecture}{section.3.2}% 18
+\BOOKMARK [1][]{section.3.3}{3.3 Algorithms Used}{chapter.3}% 19
+\BOOKMARK [1][]{section.3.4}{3.4 Optimizing Performance}{chapter.3}% 20
+\BOOKMARK [2][]{subsection.3.4.1}{3.4.1 Stop Words}{section.3.4}% 21
+\BOOKMARK [2][]{subsection.3.4.2}{3.4.2 Stemming}{section.3.4}% 22
+\BOOKMARK [1][]{section.3.5}{3.5 Semaphore Tagging}{chapter.3}% 23
+\BOOKMARK [2][]{subsection.3.5.1}{3.5.1 Cons to Semaphore}{section.3.5}% 24
+\BOOKMARK [1][]{section.3.6}{3.6 Text Preparation}{chapter.3}% 25
+\BOOKMARK [1][]{section.3.7}{3.7 Technology}{chapter.3}% 26
+\BOOKMARK [0][]{chapter.4}{4 Implementation}{}% 27
+\BOOKMARK [0][]{appendix.A}{A Appendix}{}% 28
+\BOOKMARK [0][]{appendix.B}{B Article Content}{}% 29
+\BOOKMARK [0][]{appendix.B}{Bibliography}{}% 30

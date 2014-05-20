@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  19 MAY 2014 16:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  20 MAY 2014 15:57
 entering extended mode
 **Thesis.tex
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.tex
@@ -604,77 +604,118 @@ File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
 \c@lemma=\count126
 \c@example=\count127
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 42.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 42.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 42.
-Package hyperref Info: Option `plainpages' set `false' on input line 42.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count128
+\rotFPtop=\skip58
+\rotFPbot=\skip59
+\rot@float@box=\box30
+\rot@mess@toks=\toks24
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count129
+\lst@gtempboxa=\box31
+\lst@token=\toks25
+\lst@length=\count130
+\lst@currlwidth=\dimen136
+\lst@column=\count131
+\lst@pos=\count132
+\lst@lostspace=\dimen137
+\lst@width=\dimen138
+\lst@newlines=\count133
+\lst@lineno=\count134
+\lst@maxwidth=\dimen139
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count135
+\lst@skipnumbers=\count136
+\lst@framebox=\box32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+Package hyperref Info: Option `breaklinks' set `true' on input line 46.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 46.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 46.
+Package hyperref Info: Option `plainpages' set `false' on input line 46.
 
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.aux
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ChapterIntroduction
 .aux) (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter2.aux)
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter3.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Implementation.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ArticleContent.aux)
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen136
-\scratchbox=\box30
-\nofMPsegments=\count129
-\nofMParguments=\count130
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen137
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count137
+\scratchdimen=\dimen140
+\scratchbox=\box33
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen141
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
+\everyMPtoPDFconversion=\toks27
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 53.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 57.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count134
+\c@section@level=\count143
 LaTeX Info: Redefining \Ref on input line 513.
 )
-LaTeX Info: Redefining \ref on input line 53.
-LaTeX Info: Redefining \pageref on input line 53.
-LaTeX Info: Redefining \nameref on input line 53.
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
 
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.out)
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.out)
 \@outlinefile=\write4
-LaTeX Info: Redefining \Ref on input line 53.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 57.
+LaTeX Info: Redefining \Ref on input line 57.
+\c@lstlisting=\count144
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 61.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=94, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=122, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
-Package pdftex.def Info: figures/DTU-logo.pdf used on input line 57.
+Package pdftex.def Info: figures/DTU-logo.pdf used on input line 61.
 (pdftex.def)             Requested size: 77.97668pt x 113.74683pt.
  [1
 Non-PDF special ignored!
@@ -707,7 +748,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Preface.tex
 [3] [4
 
-] <figures/SignatureDummy.jpg, id=129, 257.46187pt x 103.13531pt>
+] <figures/SignatureDummy.jpg, id=157, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
@@ -735,7 +776,10 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 
 
-] [2])
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2])
 [3] (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter2.tex
 [4
 
@@ -757,82 +801,187 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 ]
 Chapter 3.
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
-[][][][]$\T1/cmtt/m/n/8 http : / / en\OML/cmm/m/it/8 :\T1/cmtt/m/n/8 wikibooks\
-OML/cmm/m/it/8 :\T1/cmtt/m/n/8 org / wiki / Algorithm[]Implementation / Strings
- /$
+[9] [10] <figures/SingleAlgoScore.jpg, id=303, 365.86688pt x 322.95656pt>
+File: figures/SingleAlgoScore.jpg Graphic file (type jpg)
+
+<use figures/SingleAlgoScore.jpg>
+Package pdftex.def Info: figures/SingleAlgoScore.jpg used on input line 31.
+(pdftex.def)             Requested size: 182.93298pt x 161.47787pt.
+
+<figures/MultipleAlgoScores.jpg, id=306, 810.77907pt x 323.70938pt>
+File: figures/MultipleAlgoScores.jpg Graphic file (type jpg)
+
+<use figures/MultipleAlgoScores.jpg>
+Package pdftex.def Info: figures/MultipleAlgoScores.jpg used on input line 39.
+(pdftex.def)             Requested size: 243.2356pt x 97.11356pt.
+
+<figures/SystemArchitecture.jpg, id=309, 639.13782pt x 527.72156pt>
+File: figures/SystemArchitecture.jpg Graphic file (type jpg)
+
+<use figures/SystemArchitecture.jpg>
+Package pdftex.def Info: figures/SystemArchitecture.jpg used on input line 49.
+(pdftex.def)             Requested size: 319.56813pt x 263.86014pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[][]|\T1/cmr/m/n/10 Sys-tem Ar-chi-tec-ture, with many al-go-rithms do-ing text
+
  []
 
-<figures/LcsExplained.jpg, id=275, 434.37282pt x 151.3153pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/SingleA
+lgoScore.jpg> <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figur
+es/MultipleAlgoScores.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/System
+Architecture.jpg>] [13] <figures/LcsExplained.jpg, id=337, 434.37282pt x 151.31
+53pt>
 File: figures/LcsExplained.jpg Graphic file (type jpg)
 
 <use figures/LcsExplained.jpg>
-Package pdftex.def Info: figures/LcsExplained.jpg used on input line 24.
+Package pdftex.def Info: figures/LcsExplained.jpg used on input line 70.
 (pdftex.def)             Requested size: 325.77881pt x 113.48619pt.
- [11 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/LcsExp
-lained.jpg>]
-Underfull \vbox (badness 1009) has occurred while \output is active []
-
- [12]
-[13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14])
-[15] (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.tex
-[16
+ [14 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/LcsExp
+lained.jpg>] [15] [16] [17] [18]) [19]
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Implementation.tex
+[20
 
 
 
 ]
+Chapter 4.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 12.
+ [21]
+<figures/LcsExample.jpg, id=411, 805.50937pt x 347.79938pt>
+File: figures/LcsExample.jpg Graphic file (type jpg)
+
+<use figures/LcsExample.jpg>
+Package pdftex.def Info: figures/LcsExample.jpg used on input line 54.
+(pdftex.def)             Requested size: 322.19803pt x 139.11728pt.
+ [22]
+<figures/PerfectMatch.jpg, id=442, 947.03813pt x 490.83376pt>
+File: figures/PerfectMatch.jpg Graphic file (type jpg)
+
+<use figures/PerfectMatch.jpg>
+Package pdftex.def Info: figures/PerfectMatch.jpg used on input line 65.
+(pdftex.def)             Requested size: 378.80853pt x 196.33002pt.
+
+Overfull \hbox (33.50589pt too wide) in paragraph at lines 65--66
+ [][] 
+ []
+
+) [23 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/LcsEx
+ample.jpg>] [24 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/fig
+ures/PerfectMatch.jpg>]
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.tex
 Appendix A.
-) [17] [18
+File: figures/LcsExample.jpg Graphic file (type jpg)
+<use figures/LcsExample.jpg>
+Package pdftex.def Info: figures/LcsExample.jpg used on input line 14.
+(pdftex.def)             Requested size: 523.57489pt x 226.06691pt.
+) [25
 
 
-]
+
+] [26]
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ArticleContent.tex
+Appendix B.
+) [27
+
+
+
+] [28]
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.bbl
-Underfull \hbox (badness 6961) in paragraph at lines 11--16
-[]\T1/cmr/m/n/10 Infomedia.  Top 10: Kan-di-dater-nes syn-lighed i me-dierne.
+Underfull \hbox (badness 1137) in paragraph at lines 4--10
+\T1/cmr/m/n/10 munden.  []$\T1/cmtt/m/n/10 http : / / www\OML/cmm/m/it/10 :\T1/
+cmtt/m/n/10 altinget\OML/cmm/m/it/10 :\T1/cmtt/m/n/10 dk / eu / artikel / messe
+rschmidt -[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--16
-[]$\T1/cmtt/m/n/10 http : / / www\OML/cmm/m/it/10 :\T1/cmtt/m/n/10 infomedia\OM
-L/cmm/m/it/10 :\T1/cmtt/m/n/10 dk / viden -[] indsigt / europaparlamentsvalg -[
-]$
+Underfull \hbox (badness 10000) in paragraph at lines 12--18
+$\T1/cmtt/m/n/10 / / www\OML/cmm/m/it/10 :\T1/cmtt/m/n/10 infomedia\OML/cmm/m/i
+t/10 :\T1/cmtt/m/n/10 dk / viden -[] indsigt / europaparlamentsvalg -[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--16
+Underfull \hbox (badness 10000) in paragraph at lines 12--18
 $\T1/cmtt/m/n/10 og -[] patentdomstolsafstemning -[] kandidaternes -[] synlighe
 d -[] i -[]$
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--31
+[]\T1/cmr/m/n/10 Wikipedia.  Al-go-rithm im-ple-men-ta-tion/strings/-longest
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--31
+\T1/cmr/m/n/10 com-mon sub-string.  []$\T1/cmtt/m/n/10 http : / / en\OML/cmm/m/
+it/10 :\T1/cmtt/m/n/10 wikibooks\OML/cmm/m/it/10 :\T1/cmtt/m/n/10 org / w /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--31
+$\T1/cmtt/m/n/10 index\OML/cmm/m/it/10 :\T1/cmtt/m/n/10 php?title = Algorithm[]
+Implementation / Strings /$
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 25--31
+$\T1/cmtt/m/n/10 Longest[]common[]substring&action = history$[]\T1/cmr/m/n/10 ,
+ 2014.  Ac-cessed:
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 44--49
+[]\T1/cmr/m/n/10 Johan Winther.  Dan-foss fastholder sta-bil for-ret-ning.  []$
+\T1/cmtt/m/n/10 http :$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+$\T1/cmtt/m/n/10 / / www\OML/cmm/m/it/10 :\T1/cmtt/m/n/10 jv\OML/cmm/m/it/10 :\
+T1/cmtt/m/n/10 dk / artikel / 1633979 : Business -[] -[]Danfoss -[] fastholder 
+-[]$
+ []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
- [19
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+ [29
+
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.aux
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ChapterIntroduction
 .aux) (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter2.aux)
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Chapter3.aux)
-(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Implementation.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Appendix1.aux)
+(C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\ArticleContent.aux)
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 09DBF3E5AA88BF0E31384577A16A7B4F;1380.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+(rerunfilecheck)             Checksum: 8F4301364ADA0E78CD2B7525876A43F1;1833.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 8814 strings out of 493921
- 128503 string characters out of 3144842
- 216325 words of memory out of 3000000
- 11806 multiletter control sequences out of 15000+200000
- 34045 words of font info for 89 fonts, out of 3000000 for 9000
+ 10759 strings out of 493921
+ 155103 string characters out of 3144842
+ 262067 words of memory out of 3000000
+ 13647 multiletter control sequences out of 15000+200000
+ 34358 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,45p,1406b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,49p,1406b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
 \ec\dpi600\ectt1000.pk> <C:\Users\Brian.L.Pedersen\AppData\Local\MiKTeX\2.9\fon
 ts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk> <C:\Users\Brian.L.Pedersen\AppData
@@ -858,11 +1007,12 @@ s\pk\ljfour\jknappen\ec\dpi600\ecss0900.pk> <C:\Users\Brian.L.Pedersen\AppData\
 Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\Bria
 n.L.Pedersen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx20
 74.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Thesis.pdf (31 pages, 357400 bytes).
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Thesis.pdf (41 pages, 835379 bytes).
 PDF statistics:
- 997 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1210 PDF objects out of 1440 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
