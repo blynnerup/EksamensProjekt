@@ -31,6 +31,12 @@
 \contentsline {section}{\numberline {3.6}Text Preparation}{17}{section.3.6}
 \contentsline {section}{\numberline {3.7}Technology}{19}{section.3.7}
 \contentsline {chapter}{\numberline {4}Implementation}{21}{chapter.4}
-\contentsline {chapter}{\numberline {A}Appendix}{25}{appendix.A}
-\contentsline {chapter}{\numberline {B}Article Content}{27}{appendix.B}
-\contentsline {chapter}{Bibliography}{29}{appendix.B}
+\contentsline {section}{\numberline {4.1}Basic Implementation}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Modification of LCS - String Comparison}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Issue With Word (String) Comparisons}{25}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Collection of Substrings}{26}{section.4.3}
+\contentsline {chapter}{\numberline {A}Appendix}{31}{appendix.A}
+\contentsline {chapter}{\numberline {B}Article Content}{35}{appendix.B}
+\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{35}{section.B.1}
+\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{36}{section.B.2}
+\contentsline {chapter}{Bibliography}{37}{section.B.2}

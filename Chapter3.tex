@@ -48,6 +48,7 @@ The system would then ideally work as follows.
 	\centering
 	\includegraphics[scale=0.5]{figures/SystemArchitecture}
 	\caption{System Architecture, with many algorithms doing text analysis\cite{Slides}.}
+	\label{Architecture}
 \end{figure}
 
 When data (articles) arrives in the inflow, a number of fast algorithms would then do the rough split of the comparisons. All of these comparisons would then receive scores, that would then be evaluated through the ensemble model. If the scores leaves no doubt (is over a given threshold) that the article comparison is a match, the comparison would stored as a match. If the scores of the comparisons leaves some degree of doubt as to whether a comparison is a match or not (the scores being between a set of thresholds), the comparisons are then passed on to the slower algorithms, that then in turn would evaluate the comparisons. If these algorithms find that the comparison is a match, it would be stored as such. If there is still some doubt to whether it is a match or not, the articles would then finally be sent for human evaluation. 
@@ -106,6 +107,8 @@ As these tags are more of a general indicator to an articles' contents than an a
 \section{Text Preparation}
 To reduce the chance of the algorithms failing in detecting duplicates, the text should be 'normalized'. As there are quite a few pitfalls in text analysis, one should try and take as many precautions as possible. A common source of error is common spelling errors, I will not check my article for spelling errors. These can have a rather big impact on the LCS algorithm. However as all text editors today have spell checking, this will be a tiny error source.
 
+As the focus of this thesis have been on proving the thesis statement, there has been done no text preparation other than what is already implemented.
+
 Another problem with text analysis is localized spelling. An example of this can be the Swedish town of Malmö. The issue here being the 'ö' letter which is in the Swedish alphabet. This town's name can be spelled in a few different ways.
 
 
@@ -120,11 +123,11 @@ The same article could be in different newspapers, but with different spelling o
 
 Another good choice in text preparations is to lower case and remove all non alpha numerical characters. This can be advantageous for instance when looking at the name of the current Danish prime minister, Helle Thorning-Schmidt. As the hyphen can often be forgotten the last name can easily be misspelled. Removing the hyphen and replacing it with a blank space character would improve the accuracy of the algorithms. 
 
-Stemming is another good way of normalizing text, I have already covered this topic in a previous section, and will not cover this more in detail here. I have not used stemming in this thesis.
+Stemming is another good way of normalizing text, I have already covered this topic in a previous section, and will not cover this more in detail here. 
 
-Stop words will reduce the number of words in an article, and with less words, there are less error margin in terms of spelling errors. As stop words have little meaning when trying to figure out if two articles match, it is a good idea to remove these in order to improve performance. I will in this thesis remove stop words\footnote{Danish - 912 most frequent words.txt - file included in the appendixes} to see if this have any effect. 
+Stop words will reduce the number of words in an article, and with less words, there are less error margin in terms of spelling errors, also less words in the article text means less words that has to be analysed. As stop words have little meaning when trying to figure out if two articles match, it is a good idea to remove these in order to improve performance. 
 
-Unfortunately due to the time issue, I will not be able to look into that many ways of text preparations, but wanted to describe what should be kept in mind, when implementing this project into Infomedia's inflow.
+Unfortunately due to the time issue, I will not be able to look into any of text the preparations mentioned, but wanted to describe what should be kept in mind, when implementing this project into Infomedia's inflow.
 
 Finally it is important that all files are stored with the same encoding\footnote{\url{http://en.wikipedia.org/wiki/Character_encoding}}, as different encoding could cause havoc in the systems ability to read the text in the files. This is already done in the system, so I will not worry about this factor in my thesis.
 
