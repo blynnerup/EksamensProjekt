@@ -1,0 +1,88 @@
+\chapter{Test}
+
+This chapter describes the tests I did to make sure the implementation of LCS was working correctly. Also various tests was done on the test corpus using the Cosine algorithm. 
+
+During the test segment, there was a focus on mainly four sources (their article content), those being \textit{Berlingske Tidne (BERL), Politiken (POL), JV.dk (JV) and \\* http://folkebladetlemvig.dk/ (FL)}. There is various reasons for picking those four. Berlingske Tidne and Politiken are nation wide papers, and some of the most read in Denmark. As such, they have big budgets, big staffs and can afford doing a lot of journalistic work of their own. They could often deal with the same topics, can use the same news agencies (such as Reuters), but would often have a lot of unique material (at least that is the theory to be tested). jv.dk and folkebladetlemvig.dk are both local papers, meaning they they are only published in parts of the country. This means they to a larger extend deals with local happenings and news. They will have less focus on international material. As a small paper they will have small budgets, smaller staff and may not have the journalistic manpower to do much ground breaking, in-depth journalistic work. Also these papers are often distributed freely (their on line content may be protected by a payment wall) in the local area, and as such, their main revenue is adds sales. These adds will take up a lot of space in these papers, allowing for less news articles that in the bigger news papers. Finally a reason for picking these two sources in particular is that they are both owned by Belingske Media (who also owns Berlingske Tidne), and they do therefore make a good case for testing how much material is shared between media.
+
+After doing the various implementations of the algorithms, testing was made to verify the correctness of these implementations. This interweaves with the sections of the previous chapter.
+
+\section{Test of the basic LCS}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{figures/LcsExample}
+	\caption{Diagram showing the result of two articles being compared by using LCS, and plotted in Excels. See Appendix A.1 for bigger image. The green and red boxes indicates longest common substrings found.}
+	\label{LcsEx}
+\end{figure}
+
+In the end of the system implemented to deal with the article duplication, there is a part that deals with post processing (see figure ~\ref{Dataflow}). This post processing mainly deals with setting up data in reader friendly way. Mainly this involves printing results to an Excel spreadsheet. Plotting the results of the LCS to a spreadsheet helps to illustrate how LCS works, and what results are being found. 
+
+An example of this type of plot can be seen in figure~\ref{LcsEx}. The leftmost column (in green) is one article split into words, the topmost row (also in green) is another article split into words (in the basic LCS implementation the articles would be split in characters as seen in figure ~\ref{LcsExplained}). All the purple boxes indicates where a match has been found, a diagonal line indicates a row (substring) of matches. The longest one would be the \textit{'Longest Common Substring'} and the length of that would be returned by the algorithm. In the example from Figure ~\ref{LcsEx} there are two substrings of equal length (each having a length of 19 words (in the basic LCS the length would the number of characters, including white spaces)), how ever as LCS only returns the length of a single longest common substring (the longest found) and the second one (marked in the red box) is same length, LCS returns the length of the first (marked in the green box) substring. Again, as this example is made out of words rather than characters, the result could vary in case of counting actual characters, but for demonstration purposes the figure explains the idea.
+
+In the case of a perfect match (require both articles to be of the exact same length). A line along the diagonal will be drawn. Of course the nature of representing all text in a horizontal way, distorts the image somewhat, as this makes the x-axis seem shorter than the y-axis even though the two might be of equal length. 
+
+So, what does this image tell us? Well, for starters it shows us how LCS works. It helps us see how many words the two articles have in common, and it also helps us get an overview of how similar the two articles are, in terms of being duplicated. This was the goal of implementing the LCS in the first place.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.35]{figures/PerfectMatch}
+	\caption{Diagram showing a part of an almost perfect match (the article along the y-axis is slightly longer than the article along the x-axis). The long brown diagonal line indicates the longest common substring found.}
+	\label{Match}
+\end{figure}
+
+In Figure ~\ref{Match} there is two articles that are almost 100\% identical, the articles are from JV and FL. One of the articles ~\cite{JV1} is slightly shorter than the other article ~\cite{Lemvig1}. The on line content of the second article is protected by a payment wall, the article content can be found in Appendix B ~\ref{Levmig1:text}.
+What is a added bonus of these two articles is that not only are they clearly duplicates, they are also written by the same author, \textit{Johan Winther}, who happens to be a journalist working for BERL\footnote{\url{http://www.b.dk/redaktionen/johan-winther}} as per 2014-05-22. This supports the thesis that the local papers, are fed news from their owning papers, to print in their own papers. This can be out of various reasons, one could be that the owning paper would have covered a story of nation wide importance, but with a special local importance. In this case, the articles deals with the company Danfoss, which is a big company in southern Jutland, and therefore has a big significance for the ares which is covered by the two local papers (JV covers southern Jutland, and FL covers the mid-west-northern part of Jutland).
+
+\section{Test of the Modified LCS}
+
+Once the modified version of LCS was implemented, the post processing underwent some changes to support this. The Excel printing was modified to colour the longest common substrings found, that was longer than the given threshold. All substrings that match that criteria is coloured in brown in the following. After doing some testing with the threshold, a threshold of four was selected. That value seemed to include most important sentences in terms of finding duplicates. This would be especially true once stop words are removed.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.35]{figures/SubstringCollection}
+	\caption{The result of having a collection of substrings (this being a part of the full image - the spreadsheet can be seen in the file "Lcs perfect match.xlsx"). All the brown lines indicates where a substring with the minimum length of four have been found. If only the longest substring had been returned as the result, only the substring (marked by the brown line) in the green box would have been returned.}
+	\label{SubstringsEx}
+\end{figure}
+
+As seen in figure ~\ref{SubstringsEx} the addition of substring collection significantly alters the result from what we would have gotten, had we only been using the basic LCS implementation. Judging from this diagram the two articles obviously have a lot in common. To tell if the article really have something in common it is needed to take a look at their content. The best way of doing this is by reading it the old fashion way, with your own eyes.  All of the verification done in a prototype is expected to be done this way, once the users are satisfied (through repeated manual verification) that no or only very few errors would bypass the algorithms, then the verification would be left to the algorithms (as per figure ~\ref{Architecture}).
+
+\section{Fractile Distribution of Corpus}
+The way that Consine is implemented in the inflow now, is by scoring article comparison based on the angle between their vectors. This score then indicates (to some extend) how alike two articles are. The score ranges from 0.0 to 1.0. A score above indicates with a high degree of certainty that the two articles being compared are almost identical. A certain Cosine score would therefore qualify for being automatically accepted as identical, and as things currently are, articles below that score and down to a lower threshold would then have to controlled by human eyes. So we would like the LCS to do some of work for the humans by further cutting down the field of possible duplicates. This should be done by looking at the length of the LCS. The idea of the Cosine algorithm doing the initial splitting of article comparisons and then letting the somewhat slower LCS algorithm look into the comparisons which are uncertain in relation to being duplicates raises the following question, how many article comparisons are we looking at? For this a test of the test corpus would be made in order to give a visual representation of the task ahead.
+
+Before setting out on the task of comparing all articles in the test corpus, a minor test made initially. The Cosine algorithm put to work with scoring all articles from BERL and POL sources in the test corpus, storing the results in fractiles(by intervals of 0.1), and then printing them to an Excel spreadsheet.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1.0]{figures/FractileNoise}
+	\caption{The result of running Cosine on all articles in the BERL and POL sources (File: "fractile noise.xlsx").}
+	\label{FractileNoise}
+\end{figure}
+
+As seen in figure ~\ref{FractileNoise}, the vast majority of the article comparison are in the lowest fractile (0.0-0.1 Cosine score), and makes it really hard to use the pie chart for any sort of informative source. The scores are distributed as follows:
+
+\begin{center}
+	\begin{tabular}{l | r}
+		Cosine Score (x) & Number of Articles\\ \hline
+		x $\leq$ 1.0 $\bigwedge$ x $\geq$ 0.9 & 2 \\ \hline
+		x < 0.9 $\bigwedge$ x $\geq$ 0.8 & 1 \\ \hline
+		x < 0.8 $\bigwedge$ x $\geq$ 0.7 & 0 \\ \hline
+		x < 0.7 $\bigwedge$ x $\geq$ 0.6 & 1 \\ \hline
+		x < 0.6 $\bigwedge$ x $\geq$ 0.5 & 2 \\ \hline
+		x < 0.5 $\bigwedge$ x $\geq$ 0.4 & 8 \\ \hline
+		x < 0.4 $\bigwedge$ x $\geq$ 0.3 & 9 \\ \hline
+		x < 0.3 $\bigwedge$ x $\geq$ 0.2 & 17 \\ \hline
+		x < 0.2 $\bigwedge$ x $\geq$ 0.1 & 98 \\ \hline
+		x < 0.1 $\bigwedge$ x $\geq$ 0.0 & 21608 \\ \hline	
+		Total & 21746 \\ \hline
+	\end{tabular}
+\end{center}
+
+So in order to get a more informative view, removing the lowest fractile will provide a better view (see figure ~\ref{NoNoise}).
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1.0]{figures/FractileNoNoise}
+	\caption{Fractile distribution with the comparison scoring lower than 0.1 in the Cosine comparison removed.}
+	\label{NoNoise}
+\end{figure}
+

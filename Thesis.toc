@@ -13,6 +13,7 @@
 \contentsline {section}{\numberline {2.2}Matching}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Duplicates}{6}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Topic Matching}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Copyright}{7}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Analysis}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Algorithms in General}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Requirements Analysis}{9}{subsection.3.1.1}
@@ -31,12 +32,19 @@
 \contentsline {section}{\numberline {3.6}Text Preparation}{17}{section.3.6}
 \contentsline {section}{\numberline {3.7}Technology}{19}{section.3.7}
 \contentsline {chapter}{\numberline {4}Implementation}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Basic Implementation}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Modification of LCS - String Comparison}{24}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Issue With Word (String) Comparisons}{25}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Collection of Substrings}{26}{section.4.3}
-\contentsline {chapter}{\numberline {A}Appendix}{31}{appendix.A}
-\contentsline {chapter}{\numberline {B}Article Content}{35}{appendix.B}
-\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{35}{section.B.1}
-\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{36}{section.B.2}
-\contentsline {chapter}{Bibliography}{37}{section.B.2}
+\contentsline {section}{\numberline {4.1}Basic LCS Implementation}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Modification of LCS - String Comparison}{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Issue With Word (String) Comparisons}{24}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Collection of Substrings}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}Post Processing}{28}{section.4.4}
+\contentsline {chapter}{\numberline {5}Test}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Test of the basic LCS}{32}{section.5.1}
+\contentsline {section}{\numberline {5.2}Test of the Modified LCS}{34}{section.5.2}
+\contentsline {section}{\numberline {5.3}Fractile Distribution of Corpus}{36}{section.5.3}
+\contentsline {chapter}{\numberline {6}Evaluation}{39}{chapter.6}
+\contentsline {chapter}{\numberline {A}Test Diagrams}{41}{appendix.A}
+\contentsline {chapter}{\numberline {B}Article Content}{45}{appendix.B}
+\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{45}{section.B.1}
+\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{46}{section.B.2}
+\contentsline {chapter}{\numberline {C}Data Diagrams}{47}{appendix.C}
+\contentsline {chapter}{Bibliography}{51}{figure.caption.21}
