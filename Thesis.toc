@@ -41,10 +41,13 @@
 \contentsline {section}{\numberline {5.1}Test of the basic LCS}{32}{section.5.1}
 \contentsline {section}{\numberline {5.2}Test of the Modified LCS}{34}{section.5.2}
 \contentsline {section}{\numberline {5.3}Fractile Distribution of Corpus}{36}{section.5.3}
-\contentsline {chapter}{\numberline {6}Evaluation}{39}{chapter.6}
-\contentsline {chapter}{\numberline {A}Test Diagrams}{41}{appendix.A}
-\contentsline {chapter}{\numberline {B}Article Content}{45}{appendix.B}
-\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{45}{section.B.1}
-\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{46}{section.B.2}
-\contentsline {chapter}{\numberline {C}Data Diagrams}{47}{appendix.C}
-\contentsline {chapter}{Bibliography}{51}{figure.caption.21}
+\contentsline {chapter}{\numberline {6}Evaluation}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Scores}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Limiting the Number of Comparisons by Cosine Score}{44}{section.6.2}
+\contentsline {section}{\numberline {6.3}Getting an Overview}{44}{section.6.3}
+\contentsline {chapter}{\numberline {A}Test Diagrams}{47}{appendix.A}
+\contentsline {chapter}{\numberline {B}Article Content}{51}{appendix.B}
+\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{51}{section.B.1}
+\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{52}{section.B.2}
+\contentsline {chapter}{\numberline {C}Data Diagrams}{53}{appendix.C}
+\contentsline {chapter}{Bibliography}{57}{figure.caption.26}

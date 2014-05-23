@@ -1,3 +1,20 @@
 \chapter{Evaluation}
+This chapter deals with evaluating the results from the program when scoring article comparisons.
+
+After having done tests to verify that the implementation of the algorithms worked correctly, it is now time to analyse the output.
+
+\section{Scores}
+
+The Cosine algorithm returns a score that is in fact an angle, where as the LCS algorithm returns a score that is based on the length of a string. As such these are hardly comparable in a one to one basis. If we modify the score of the LCS to not say something about the length of the substring(s), but tell us in percent how long the string is compared to the article is, it will produce a result that relates to the amount of text the two articles being compared have in common. This being said we still need to consider that the percentage value is relative to the length of the length of the article. We do therefore need to do a percentage calculation for both article's length. For better comparison of the Cosine and LCS score in the Excel graphs, the LCS percentage score is divided by 100.
+
+So, a Cosine score of 1.0 means that the two article vectors are identical, same length and no angle between them. A LCS score of 1.0 means that the longest common substring's length is 100\% of the article's length. So each score will have to be evaluated on their own premisses, as a Cosine score of 0.5 is not 50\% identical. The Cosine score tells us something about how many special words that two articles have in common, where are the LCS tells us about the amount of text that is shared between the two articles.
+
+\section{Limiting the Number of Comparisons by Cosine Score}
+
+As discussed in the last chapter ~\ref{AllFractiles} there is many comparisons in the lowest fractile of the article comparisons. Although dismissing them right of the bat can be seen as hasty, the chance of comparisons scoring below 0.3 having much in common would be unlikely. This is because comparisons that score very low in the Cosine algorithm either have very little in common in terms of special words (as common words will have very little impact on the vector) or the article is very short and again, with few special words (we will see an example of this later on). as very short articles with no special words included would score very low with the Cosine algorithm. How ever, an article with no special words that is very short, is very rare and few in between. We will however see examples of such articles later on.
+
+For the sake of proving anything in this thesis how ever, and as the chance of getting useful results from comparisons with low Cosine scores are slim and the number of comparisons having to be humanly checked are massive in numbers, I will for the rest of this thesis, disregard all comparisons with a cosine score lower than 0.3.
+
+\section{Getting an Overview}
 
 What does figure ~\ref{SubstringsEx} then tell us, just by looking at it as it stands? With some minor deviances the beginning of both articles are identical. Then after the green box in the figure there is a huge gap in substrings. This tells us that the article along the x-axis the have a lot of text that is not shared with the article along the y-axis. Then towards the end of the articles they have a lot in common again. This would indicate that the article along the y-axis is an excerpt of the article along the x-axis. They would therefore both be articles about the same topic, and most likely are identical (in respects to the parts they have in common). This would seem like an article duplicate. The gaps in the axis thus tells us something about whether an article is a duplicate in the terms of a copy (all words are identical and both articles are of the same length(roughly)), if the article is a duplicate in the terms of being an excerpt, or if the articles have nothing in common.
