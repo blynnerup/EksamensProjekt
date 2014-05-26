@@ -2,7 +2,7 @@
 
 This chapter describes the tests that was done to make sure the implementation of LCS was working correctly. Also various tests was done on the test corpus using the Cosine algorithm. 
 
-During the test segment, there was a focus on mainly four sources (their article content), those being \textit{Berlingske Tidne (BERL), Politiken (POL), JV.dk (JV) and \\* http://folkebladetlemvig.dk/ (FL)}. There is various reasons for picking those four. Berlingske Tidne and Politiken are nation wide papers, and some of the most read in Denmark. As such, they have big budgets, big staffs and can afford doing a lot of journalistic work of their own. They could often deal with the same topics, can use the same news agencies (such as Reuters), but would often have a lot of unique material (at least that is the theory to be tested). jv.dk and folkebladetlemvig.dk are both local papers, meaning they they are only published in parts of the country. This means they to a larger extend deals with local happenings and news. They will have less focus on international material. As a small paper they will have small budgets, smaller staff and may not have the journalistic manpower to do much ground breaking, in-depth journalistic work. Also these papers are often distributed freely (their on line content may be protected by a payment wall) in the local area, and as such, their main revenue is adds sales. These adds will take up a lot of space in these papers, allowing for less news articles that in the bigger news papers. Finally a reason for picking these two sources in particular is that they are both owned by Belingske Media (who also owns Berlingske Tidne), and they do therefore make a good case for testing how much material is shared between media.
+During the test segment, there was a focus on mainly four sources (their article content), those being \textit{Jyllands Posten (JP), Politiken (POL), JV.dk (JV) and \\* http://folkebladetlemvig.dk/ (FL)}. There is various reasons for picking those four. Jyllands Posten and Politiken are nation wide papers, and some of the most read in Denmark. As such, they have big budgets, big staffs and can afford doing a lot of journalistic work of their own. They could often deal with the same topics, can use the same news agencies (such as Reuters), but would often have a lot of unique material (at least that is the theory to be tested). jv.dk and folkebladetlemvig.dk are both local papers, meaning they they are only published in parts of the country. This means they to a larger extend deals with local happenings and news. They will have less focus on international material. As a small paper they will have small budgets, smaller staff and may not have the journalistic manpower to do much ground breaking, in-depth journalistic work. Also these papers are often distributed freely (their on line content may be protected by a payment wall) in the local area, and as such, their main revenue is adds sales. These adds will take up a lot of space in these papers, allowing for less news articles that in the bigger news papers. Finally a reason for picking these two sources in particular is that they are both owned by Belingske Media, and they do therefore make a good case for testing how much (if any) material is shared between media.
 
 After doing the various implementations of the algorithms, testing was made to verify the correctness of these implementations. This interweaves with the sections of the previous chapter.
 
@@ -31,7 +31,7 @@ So, what does this image tell us? Well, for starters it shows us how LCS works. 
 \end{figure}
 
 In Figure ~\ref{Match} there is two articles that are almost 100\% identical, the articles are from JV and FL. One of the articles ~\cite{JV1} is slightly shorter than the other article ~\cite{Lemvig1}. The on line content of the second article is protected by a payment wall, the article content can be found in Appendix B ~\ref{Levmig1:text}.
-What is a added bonus of these two articles is that not only are they clearly duplicates, they are also written by the same author, \textit{Johan Winther}, who happens to be a journalist working for BERL\footnote{\url{http://www.b.dk/redaktionen/johan-winther}} as per 2014-05-22. This supports the thesis that the local papers, are fed news from their owning papers, to print in their own papers. This can be out of various reasons, one could be that the owning paper would have covered a story of nation wide importance, but with a special local importance. In this case, the articles deals with the company Danfoss, which is a big company in southern Jutland, and therefore has a big significance for the ares which is covered by the two local papers (JV covers southern Jutland, and FL covers the mid-west-northern part of Jutland).
+What is a added bonus of these two articles is that not only are they clearly duplicates, they are also written by the same author, \textit{Johan Winther}, who happens to be a journalist working for Berlingske Tidne\footnote{\url{http://www.b.dk/redaktionen/johan-winther}} as per 2014-05-22. This supports the thesis that the local papers, are fed news from their owning papers, to print in their own papers. This can be out of various reasons, one could be that the owning paper would have covered a story of nation wide importance, but with a special local importance. In this case, the articles deals with the company Danfoss, which is a big company in southern Jutland, and therefore has a big significance for the ares which is covered by the two local papers (JV covers southern Jutland, and FL covers the mid-west-northern part of Jutland).
 
 \section{Test of the Modified LCS}
 
@@ -40,7 +40,7 @@ Once the modified version of LCS was implemented, the post processing underwent 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.35]{figures/SubstringCollection}
-	\caption{The result of having a collection of substrings (this being a part of the full image - the spreadsheet can be seen in the file "Lcs perfect match.xlsx"). All substrings with a minimum length equal or grater to the threshold, have been coloured brown. All substrings that is short than this, is coloured in purple. If only the longest substring had been returned as the result, only the substring (marked by the brown line) in the green box would have been returned.}
+	\caption{The result of having a collection of substrings). All substrings with a minimum length equal or grater to the threshold, have been coloured brown. All substrings that is short than this, is coloured in purple. If only the longest substring had been returned as the result, only the substring (marked by the brown line) in the green box would have been returned.}
 	\label{SubstringsEx}
 \end{figure}
 
@@ -49,12 +49,12 @@ As seen in figure ~\ref{SubstringsEx} the addition of substring collection signi
 \section{Fractile Distribution of Corpus}
 The way that Consine is implemented in the inflow now, is by scoring article comparisons based on the angle between the article's vectors. This score then indicates (to some extend) how alike two articles are. The score ranges from 0.0 to 1.0. In the inflow, Infomedia simply stores all comparisons with a score above 0.6, these articles can then be verified (this is where LCS will come in handy). For this thesis however, we will compare all articles and then use the LCS on those with a Cosine score above a certain threshold. A Cosine score above 0.9 indicates, with a high degree of certainty, that the two articles being compared are practical identical (there can be modifications to this statement, will be discussed later). A certain Cosine score would therefore qualify for a comparison being automatically accepted as identical, articles below that score and down to a lower threshold would then have to controlled by human eyes. So we would like the LCS to do some of work for the humans by further cutting down the field of possible duplicates. The idea of the Cosine algorithm doing the initial splitting of article comparisons and then letting the somewhat slower LCS algorithm look into the comparisons which are uncertain in relation to being duplicates raises the following question, how many article comparisons are we looking at? For this a test of the test corpus would be made in order to give a visual representation of the task ahead.
 
-Before setting out on the task of comparing all articles in the test corpus, a minor test made initially. The Cosine algorithm put to work with scoring all articles from BERL and POL sources in the test corpus, storing the results in fractiles(by intervals of 0.1), and then printing them to an Excel spreadsheet.
+Before setting out on the task of comparing all articles in the test corpus, a minor test was made initially. The Cosine algorithm was put to work with scoring all articles from BERL and POL sources in the test corpus, storing the results in fractiles(by intervals of 0.1), and then printing them to an Excel spreadsheet.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=1.0]{figures/FractileNoise}
-	\caption{The result of running Cosine on all articles in the BERL and POL sources (File: "fractile noise.xlsx").}
+	\caption{The result of running Cosine on all articles in the JP and POL sources (File: "fractile noise.xlsx").}
 	\label{FractileNoise}
 \end{figure}
 
@@ -77,7 +77,7 @@ As seen in figure ~\ref{FractileNoise}, the vast majority of the article compari
 		Total Comparisons & 21746 \\ \hline
 	\end{tabular}
 \end{center}
-\caption{Fractile distribution of article comparisons for BERL and POL.}\label{TestFractile}
+\caption{Fractile distribution of article comparisons for JP and POL.}\label{TestFractile}
 \end{table}
 
 So in order to get a more informative view, removing the lowest fractile (comparisons scoring below 0.1 with the Cosine algorithm) will provide a better view (see figure ~\ref{NoNoise}). Please note that the value given in the various of the sections of the pie chart, is the minimum value of the fractile in question and percentage of comparisons in that fractile. The fractile named '0,9' is the fractile containing all comparisons that scored between 1.0 and 0.9(included).
@@ -85,7 +85,7 @@ So in order to get a more informative view, removing the lowest fractile (compar
 \begin{figure}
 	\centering
 	\includegraphics[scale=1.0]{figures/FractileNoNoise}
-	\caption{Fractile distribution (BERL and POL articles) with the comparisons scoring lower than 0.1 in the Cosine comparison removed.}
+	\caption{Fractile distribution (JP and POL articles) with the comparisons scoring lower than 0.1 in the Cosine comparison removed.}
 	\label{NoNoise}
 \end{figure}
 
@@ -119,9 +119,9 @@ To double check the test result, and also to test the thesis that JV and FL do s
 \end{table}
 
 
-Once again we see a large amount of comparisons in the 0.1-0.2 fractile ~\ref{JVFLFractile}, it being a great deal bigger (83\% versus the 71\% in figure ~\ref{NoNoise} in the 0.1-0.2 fractile). We do however also see a bigger amount of comparisons in the top fractile (0.9-1.0) which would indicate that these two sources actually share quite a few articles, and also have more articles in common than BERL and POL.
+Once again we see a large amount of comparisons in the 0.1-0.2 fractile ~\ref{JVFLFractile}, it being a great deal bigger (83\% versus the 71\% in figure ~\ref{NoNoise} in the 0.1-0.2 fractile). We do however also see a bigger amount of comparisons in the top fractile (0.9-1.0) which would indicate that these two sources actually share quite a few articles, and also have more articles in common than JP and POL.
 
-As a final test, to get the big picture of the task ahead, a test was performed for all articles in the test corpus (File: "symmetric all files fractiles.xlsx"). When running the Cosine algorithm, it is given three parameters the two first being the files to be compared, the third being a list that will contains the comparison score along with the articles information. Cosine starts with making a check of the two file sets, if they are the same, it will do a triangle comparison. This means we only have to check half the number of possible comparisons - minus the diagonal. This is handy if we want to do a comparison on a single set of articles. If you want to compare the articles two days (or some other time frame), the algorithm will do an asymmetrical comparison, meaning that all possible comparisons are made - minus the diagonal, as checking an article with itself is trivial.
+As a final test, to get the big picture of the task ahead, a test was performed for all articles in the test corpus (File: "symmetric all files fractiles.xlsx"). When running the Cosine algorithm, it is given three parameters the two first being the files to be compared, the third being a list that will contains the comparison score along with the articles information. Cosine starts with making a check of the two file sets, if they are the same, it will do a triangle comparison. This means we only have to check half the number of possible comparisons - minus the diagonal. This is handy if we want to do a comparison on a single set of articles. If you want to compare the articles from two days (or some other time frame), the algorithm will do an asymmetrical comparison, meaning that all possible comparisons are made - minus the diagonal, as checking an article with itself is trivial.
 
 \begin{figure}
 	\centering
