@@ -45,14 +45,26 @@
 \contentsline {section}{\numberline {6.1}Scores}{43}{section.6.1}
 \contentsline {section}{\numberline {6.2}Limiting the Number of Comparisons by Cosine Score}{44}{section.6.2}
 \contentsline {section}{\numberline {6.3}What the Scores Tell}{44}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Definition of "High Scoring"}{45}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Score Analysis}{45}{section.6.4}
-\contentsline {section}{\numberline {6.5}Analysis of Comparisons}{45}{section.6.5}
+\contentsline {section}{\numberline {6.5}Analysis of Comparisons}{46}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}JP and POL Comparison}{46}{subsection.6.5.1}
-\contentsline {section}{\numberline {6.6}Weighing the Scores}{50}{section.6.6}
-\contentsline {chapter}{\numberline {A}Test Diagrams}{53}{appendix.A}
-\contentsline {chapter}{\numberline {B}Article Content}{57}{appendix.B}
-\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{57}{section.B.1}
-\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{58}{section.B.2}
-\contentsline {chapter}{\numberline {C}Data Diagrams}{59}{appendix.C}
-\contentsline {chapter}{\numberline {D}Evaluation Diagrams}{63}{appendix.D}
-\contentsline {chapter}{Bibliography}{65}{figure.caption.32}
+\contentsline {subsubsection}{\numberline {6.5.1.1}Low Scoring Comparison}{56}{subsubsection.6.5.1.1}
+\contentsline {subsection}{\numberline {6.5.2}JV and FL Comparion}{57}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}Weighing the Scores}{59}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Applying the Score Weight}{61}{subsection.6.6.1}
+\contentsline {chapter}{\numberline {A}Test Diagrams}{63}{appendix.A}
+\contentsline {chapter}{\numberline {B}Article Content}{67}{appendix.B}
+\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{67}{section.B.1}
+\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{68}{section.B.2}
+\contentsline {section}{\numberline {B.3}BRIDGE: Cavendish \#1}{68}{section.B.3}
+\contentsline {section}{\numberline {B.4}BRIDGE: Cavendish \#2}{69}{section.B.4}
+\contentsline {section}{\numberline {B.5}SKAK: Mr. Karpov \#1}{69}{section.B.5}
+\contentsline {section}{\numberline {B.6}SKAK: Mr. Karpov \#2}{70}{section.B.6}
+\contentsline {section}{\numberline {B.7}Dv\IeC {\ae }rgen der voksede og blev en k\IeC {\ae }mpe}{70}{section.B.7}
+\contentsline {section}{\numberline {B.8}50 \IeC {\r A}R I DAG: Den uortodokse brasilianer}{71}{section.B.8}
+\contentsline {section}{\numberline {B.9}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#1}{72}{section.B.9}
+\contentsline {section}{\numberline {B.10}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#2}{72}{section.B.10}
+\contentsline {chapter}{\numberline {C}Data Diagrams}{73}{appendix.C}
+\contentsline {chapter}{\numberline {D}Evaluation Diagrams}{77}{appendix.D}
+\contentsline {chapter}{Bibliography}{81}{figure.caption.50}
