@@ -1,0 +1,22 @@
+\chapter{Discussion}
+
+This project is dealing with a topic that is of big importance to the industry that Infomedia works in, and it has proven to be anything, but a simple task. While this thesis is only a prototype on a system that would include several algorithms to do text matching, a few defining results were made. However, there is still a lot of testing to be done in order to call the system waterproof. This chapter will look into some of the issues that were discovered along the way.
+
+\section{Text Normalization and Scores}
+As talked about in the beginning of this thesis, the issue of text normalization showed to have an impact. During the thesis we have seen several examples of the issues of not being able to do a full normalization of the article text before applying the algorithms. So far, no apparent issues have been found that includes special characters, but there have been a lot of formatting issues. We saw in figure ~\ref{JPPOLSencondHighestLCS} the problem with white spaces. This might not have been a deciding factor in most cases as to what match group have been applied to a comparison, but we cannot be sure.
+
+Applying the match groups was based off several things, amongst that the LCS scores. This score is sensitive to formatting errors, and to eliminate this factor we would have to normalize the text.
+
+\section{LCS Threshold}
+In this thesis, we have been working with an LCS threshold of four. We saw at least one example of where this threshold had a great impact (see figure ~\ref{LengthIssue}). Another factor worth taking into account when looking at the LCS threshold would be to remove white spaces from the LCS. Also removing stop words would impact this.
+
+\section{Score Evaluation}
+Another area that really need some more thorough testing is the score evaluation. Both groups of enums created (the ones describing article length and the ones that are placing comparisons into match groups) are based on imperative studies. There is not set rules for when an article is to be considered "short" or "long". Neither are there any defining boundaries that tells us whether a comparison is a match or a partial match. All of this is based of "what felt right at the time, and the results found when testing". The results that have been found shows us, that these defining enums appears to be valid. We have seen a good few examples that proves that the combination of algorithms can in fact help give a better score indication. 
+
+The limiting factors that is time, and this thesis being done by one person, sets a limit as to how many comparisons can be proof read. It would require more work to fully confirm if this solution is 100\% right all the time.
+
+\section{Test Size}
+Another issue brought onto this thesis by the limitations of time and personnel available, is the issue of how much material in the test corpus could be used. Of the 557 sources available in the test corpus, only four have been tested. Although the findings of testing these four sources was conclusive in the sense that there was no comparisons that produced a result that could not be explained or that seemed too out of the ordinary, a test on a bigger part of the test corpus are really needed. This is also true for the way the score evaluation was made. The methods evaluating scores was based of the findings of comparing the four sources. And testing this on all 557 sources, would maybe alter the thresholds for weighing scores.
+
+\section{Overall}
+When all is said and done, this is after all, only a prototype. There is room for improvement and tweaking the way the program works, both in terms of coding but also in terms of scoring comparisons and text preparation. More testing would also be required in order to fully confirm that the way that the program works, actually produces true positive results. By and large the thesis did end up proving what we set out to do.

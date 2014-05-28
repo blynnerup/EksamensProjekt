@@ -210,7 +210,7 @@ The next comparison to be looked at is the 6th comparison (article Ids \textit{e
 	Cosine & 0.533468902\\ \hline
 	Basic LCS & 0.0138186\\ \hline
 	LCS (long article) & 0.013357899\\ \hline
-	LCS (short article) & 0,017251637\\ \hline
+	LCS (short article) & 0.017251637\\ \hline
 	Long article length & 2171\\ \hline
 	Short article length & 1681\\ \hline	
 	\end{tabular}
@@ -236,9 +236,9 @@ Finally for these sources an interesting case was found, when lowering the Cosin
 	\begin{tabular}{l | r}
 	Ids & e41055d0 / e4105462\\ \hline
 	Cosine & 0.105226949\\ \hline
-	Basic LCS & 0,05952381\\ \hline
-	LCS (long article) & 0,05952381\\ \hline
-	LCS (short article) & 0,303030312\\ \hline
+	Basic LCS & 0.05952381\\ \hline
+	LCS (long article) & 0.05952381\\ \hline
+	LCS (short article) & 0.303030312\\ \hline
 	Long article length & 168\\ \hline
 	Short article length & 33\\ \hline	
 	\end{tabular}
@@ -281,12 +281,12 @@ To look into why that is a closer inspection of the comparison seen in table ~\r
 	Cosine & 0.929463029\\ \hline
 	Basic LCS & 0.62894249\\ \hline
 	LCS (long article) & 0.99072355\\ \hline
-	LCS (short article) & 1,575221181\\ \hline
+	LCS (short article) & 1.575221181\\ \hline
 	Long article length & 539\\ \hline
 	Short article length & 339\\ \hline	
 	\end{tabular}
 \end{center}
-\caption{Scores for a low scoring (Cosine) comparison, with some interesting scores none the less. (File: JYPPOL.xlsx).}
+\caption{A comparison with an LCS score above 1.0.}
 \label{JVFL100}
 \end{table}
 
@@ -302,21 +302,11 @@ The very high Cosine score indicates that a match has been found. Looking at the
 The plot in figure ~\ref{Over100} shows that we have two substrings of substantial length. When the substrings are placed in ways that they overlap in either direction, it means that text is repeated. This will often be the case when having a sub headline that are in turn repeated in the body text of the article (although it can also be a random collection of words, which all the purple squares shows). The text of the two articles can be found in appendix ~\ref{JVFLMatch1} and ~\ref{JVFLMatch2}. As it can be read from ~\ref{JVFLMatch2}, it has a lot of text repeated for some reason. This is the reason that the article scores more than 1.0 in the Cosine score. This result is not wrong per say, it just indicates that we have a lot of text in common in the articles being compared.
 
 \section{Weighing the Scores}
-In the previous sections we became aware that we need to do some amount of evaluation of various factors when determining if two articles are duplications. We need to take into account the length in combination with the scores, but also the scores in relation to each other. These factors all help us decide if we are looking at duplicates or not. In this section we will look into these factors and apply them to our comparisons.
+In the previous sections we became aware that we need to do some amount of evaluation of various factors when determining if two articles are duplications to avoid cases where the result would be false positive or false negative. We need to take into account the length in combination with the scores, but also the scores in relation to each other. These factors all help us decide if we are looking at duplicates or not. In this section we will look into these factors and apply them to our comparisons.
 
-In combination the two sets of scores (Cosine and both of the LCS scores) can draw us a more detailed picture, one that to a higher degree of confidence call tell about any relations between two articles. To try and break scores into something that is able to be defined, the following enums have been created, and called \textit{'Match Groups'}:
+In combination, the two sets of scores (Cosine and both of the LCS scores), can draw us a more detailed picture, one that to a higher degree of confidence call tell about any relations between two articles. As we have seen, we can often get a sort of gut feeling about how well the two articles in a comparison is related by looking at their scores.
 
-\begin{itemize}
-\item \textbf{Match:} The comparison is to a high degree a perfect match, meaning that the two articles being compared have a lot of text in common, scores high with the algorithms and is somewhat similar in length.
-\item \textbf{Partial Match:} This label would be a applied to a comparison, where only parts of the articles are shared, or that one article is a good deal shorter than the other, but scores highly in LCS. It would be considered an article excerpt.
-\item \textbf{Same Content:} For comparisons with relative high Cosine scores, but somewhat low LCS scores, we can sometimes talk about the articles deal with the same topic, but without sharing much text. 
-\item \textbf{Low Score Match:} Applying this label to a comparison would indicate that either one or both article are very short in length, can have a relative high Cosine score, but will have a high LCS score. It will indicate that the comparison most have a lot in common, but will maybe not contain much article text of much value.
-\item \textbf{No Match:} When both algorithms scores low for a comparison, there is grounds to dismiss the comparison as a match. The articles will not have many sentences or special words in common.
-\end{itemize}
-
-The need for these match groups became obvious in the previous sections when we started to see comparisons that had a fairly high amount of text in common, but not enough to fully qualify as a duplicate.
-
-The following table was created in order to try and give some weight to the scores. This could then be used in the program for score evaluation. The weight would be a factor that could be multiplied to the scores the algorithms produced in order to emphasize the result. These score weightings is based of tests that was done during the project.
+The table ~\ref{ScoreWeights} was created in order to try and give some weight to the scores. This could then be used in the program for score evaluation. We can then emphasize scores that with a high degree of certainty is a match, and suppress false positives. The weight would be a factor that could be multiplied to the scores the algorithms produced in order to emphasize the result. These score weightings was based of the results gotten from doing article comparisons. There would be times where the scores would indicate a match in situations where there was no basis to talk of a real match (like what we saw in figure ~\ref{LengthIssue}). The table ~\ref{ScoreWeights} was then created in order to try and set up a basis for evaluating the scores. 
 
 \begin{table}
 \begin{center}
@@ -357,7 +347,7 @@ The table ~\ref{ScoreWeights} would be an immediate indication as to how related
 \subsection{Applying the Score Weight}
 Applying the weighing to the scores would only make sense if applied to the LCS score. The Cosine score is hard to alter in any meaningful way as it relates solely to the overall content matching. The LCS score can however become more useful if adjusted in accordance with the parameters discussed earlier. In the implementation only the LCS score based off the shortest article would be adjusted. This is because that this score would fluctuate more than the longer relative to it's length.
 
-First off the article would be scored as normal. Once the post processing of the results would commence, all articles would get the enum describing their length. Then based of their length enums several methods was created to evaluate the LCS score based of the length and all of the comparisons scores. These methods was modelled in relation to table ~\ref{ScoreWeights}. The way it was modelled was to try and generate a lot of "buttons" that could be turned for many different cases of scores.
+First off the article would be scored as normal. Once the post processing of the results would commence, all articles would get the enum describing their length. Then based of their length enums several methods was created to evaluate the LCS score based of the length and all of the comparisons scores. The way these methods was created was based on the values in table ~\ref{ScoreWeights}. It was modelled  this way to try and generate a lot of "buttons" that could be turned for many different cases of scores. The adjusted scores can be found in the source comparison spreadsheets.
 
 \lstset{style=sharpc}
 \begin{lstlisting}[caption=Part of the method for applying LCS score weight, captionpos=b]
@@ -392,11 +382,66 @@ First off the article would be scored as normal. Once the post processing of the
                     return 1.0F;
                 return 0.6F;
             }
-          }
-
 \end{lstlisting}
 
-<BESKRIV HVORDAN MATCHING GROUP BLEV TILSKREVET- KODE UDDRAG!!>
+\subsection{Match Groups} 
+Once the score had been adjusted it is time to apply the match group.
+
+To try and break scores into something that is able to be defined, the following enums have been created, and called \textit{'Match Groups'}:
+
+\begin{itemize}
+\item \textbf{Match:} The comparison is to a high degree a perfect match, meaning that the two articles being compared have a lot of text in common, scores high with the algorithms and is somewhat similar in length.
+\item \textbf{Partial Match:} This label would be a applied to a comparison, where only parts of the articles are shared, or that one article is a good deal shorter than the other, but scores highly in LCS. It would be considered an article excerpt.
+\item \textbf{Same Content:} For comparisons with relative high Cosine scores, but somewhat low LCS scores, we can sometimes talk about the articles deal with the same topic, but without sharing much text. 
+\item \textbf{Low Score Match:} Applying this label to a comparison would indicate that either one or both article are very short in length, can have a relative high Cosine score, but will have a high LCS score. It will indicate that the comparison most have a lot in common, but will maybe not contain much article text of much value.
+\item \textbf{No Match:} When both algorithms scores low for a comparison, there is grounds to dismiss the comparison as a match. The articles will not have many sentences or special words in common.
+\end{itemize}
+
+The need for these match groups became obvious in the previous sections when we started to see comparisons that had a fairly high amount of text in common, but not enough to fully qualify as a duplicate. 
+
+
+\lstset{style=sharpc}
+\begin{lstlisting}[caption=Part of the method for applying Match Groups, captionpos=b]
+private MatchCategory ComputeMatchCategory(
+	float evalScore, float cosineScore)
+  {
+    if (cosineScore.Equals(0.0F))
+    {
+      if (evalScore.Equals(0.0F))
+          return MatchCategory.NoMatch;
+      if (evalScore > 0.0F && evalScore < 0.8F)
+          return MatchCategory.NoMatch;
+      if (evalScore >= 0.8F && evalScore < 0.9F)
+          return MatchCategory.LowScoreMatch;
+      return MatchCategory.LowScoreMatch;
+     }
+     if (cosineScore > 0.0F && cosineScore < 0.1F)
+     {
+       if (evalScore < 0.8F)
+           return MatchCategory.NoMatch;
+       return MatchCategory.LowScoreMatch;
+     }
+     if (cosineScore >= 0.1F && cosineScore < 0.2F)
+     {
+       if (evalScore < 0.7F)
+           return MatchCategory.NoMatch;
+       if (evalScore >= 0.7F && evalScore < 0.8F)
+           return MatchCategory.LowScoreMatch;
+       return MatchCategory.PartialMatch;
+     }
+     if (cosineScore >= 0.2F && cosineScore < 0.3F)
+     {
+       if (evalScore < 0.7F)
+           return MatchCategory.NoMatch;
+       if (evalScore >= 0.7F && evalScore < 0.9F)
+           return MatchCategory.PartialMatch;
+       return MatchCategory.Match;
+     }
+\end{lstlisting}
+
+We see in listing 6.2 that based on the evaluated score that was produced by multiplying the short LCS score with the weight from listing 6.1 and the cosine score, how match groups are applied. This method was modelled on the table ~\ref{ScoreWeights}. In the nature of things these boundaries are in fuzzy in nature, and a match could rightfully belong in two match groups.
+
+After having done the matching all the scores and graphs was created in their respective spreadsheets. Their results can be found in the included files.
 
 
 

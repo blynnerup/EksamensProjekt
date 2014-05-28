@@ -53,18 +53,27 @@
 \contentsline {subsection}{\numberline {6.5.2}JV and FL Comparion}{57}{subsection.6.5.2}
 \contentsline {section}{\numberline {6.6}Weighing the Scores}{59}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Applying the Score Weight}{61}{subsection.6.6.1}
-\contentsline {chapter}{\numberline {A}Test Diagrams}{63}{appendix.A}
-\contentsline {chapter}{\numberline {B}Article Content}{67}{appendix.B}
-\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{67}{section.B.1}
-\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{68}{section.B.2}
-\contentsline {section}{\numberline {B.3}BRIDGE: Cavendish \#1}{68}{section.B.3}
-\contentsline {section}{\numberline {B.4}BRIDGE: Cavendish \#2}{69}{section.B.4}
-\contentsline {section}{\numberline {B.5}SKAK: Mr. Karpov \#1}{69}{section.B.5}
-\contentsline {section}{\numberline {B.6}SKAK: Mr. Karpov \#2}{70}{section.B.6}
-\contentsline {section}{\numberline {B.7}Dv\IeC {\ae }rgen der voksede og blev en k\IeC {\ae }mpe}{70}{section.B.7}
-\contentsline {section}{\numberline {B.8}50 \IeC {\r A}R I DAG: Den uortodokse brasilianer}{71}{section.B.8}
-\contentsline {section}{\numberline {B.9}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#1}{72}{section.B.9}
-\contentsline {section}{\numberline {B.10}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#2}{72}{section.B.10}
-\contentsline {chapter}{\numberline {C}Data Diagrams}{73}{appendix.C}
-\contentsline {chapter}{\numberline {D}Evaluation Diagrams}{77}{appendix.D}
-\contentsline {chapter}{Bibliography}{81}{figure.caption.50}
+\contentsline {subsection}{\numberline {6.6.2}Match Groups}{62}{subsection.6.6.2}
+\contentsline {chapter}{\numberline {7}Discussion}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}Text Normalization and Scores}{65}{section.7.1}
+\contentsline {section}{\numberline {7.2}LCS Threshold}{66}{section.7.2}
+\contentsline {section}{\numberline {7.3}Score Evaluation}{66}{section.7.3}
+\contentsline {section}{\numberline {7.4}Test Size}{66}{section.7.4}
+\contentsline {section}{\numberline {7.5}Overall}{67}{section.7.5}
+\contentsline {chapter}{\numberline {8}Future Implementation}{69}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusion}{71}{chapter.9}
+\contentsline {chapter}{\numberline {A}Test Diagrams}{73}{appendix.A}
+\contentsline {chapter}{\numberline {B}Article Content}{77}{appendix.B}
+\contentsline {section}{\numberline {B.1}Danfoss fastholder stabil forretning}{77}{section.B.1}
+\contentsline {section}{\numberline {B.2}Danfoss fastholder stabil forretning - w/o Stop Words}{78}{section.B.2}
+\contentsline {section}{\numberline {B.3}BRIDGE: Cavendish \#1}{78}{section.B.3}
+\contentsline {section}{\numberline {B.4}BRIDGE: Cavendish \#2}{79}{section.B.4}
+\contentsline {section}{\numberline {B.5}SKAK: Mr. Karpov \#1}{79}{section.B.5}
+\contentsline {section}{\numberline {B.6}SKAK: Mr. Karpov \#2}{80}{section.B.6}
+\contentsline {section}{\numberline {B.7}Dv\IeC {\ae }rgen der voksede og blev en k\IeC {\ae }mpe}{80}{section.B.7}
+\contentsline {section}{\numberline {B.8}50 \IeC {\r A}R I DAG: Den uortodokse brasilianer}{81}{section.B.8}
+\contentsline {section}{\numberline {B.9}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#1}{82}{section.B.9}
+\contentsline {section}{\numberline {B.10}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#2}{82}{section.B.10}
+\contentsline {chapter}{\numberline {C}Data Diagrams}{83}{appendix.C}
+\contentsline {chapter}{\numberline {D}Evaluation Diagrams}{87}{appendix.D}
+\contentsline {chapter}{Bibliography}{91}{figure.caption.50}
