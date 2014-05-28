@@ -52,14 +52,15 @@
 \contentsline {subsubsection}{\numberline {6.5.1.1}Low Scoring Comparison}{56}{subsubsection.6.5.1.1}
 \contentsline {subsection}{\numberline {6.5.2}JV and FL Comparion}{57}{subsection.6.5.2}
 \contentsline {section}{\numberline {6.6}Weighing the Scores}{59}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Applying the Score Weight}{61}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.1}Applying the Score Weight}{60}{subsection.6.6.1}
 \contentsline {subsection}{\numberline {6.6.2}Match Groups}{62}{subsection.6.6.2}
 \contentsline {chapter}{\numberline {7}Discussion}{65}{chapter.7}
 \contentsline {section}{\numberline {7.1}Text Normalization and Scores}{65}{section.7.1}
 \contentsline {section}{\numberline {7.2}LCS Threshold}{66}{section.7.2}
 \contentsline {section}{\numberline {7.3}Score Evaluation}{66}{section.7.3}
-\contentsline {section}{\numberline {7.4}Test Size}{66}{section.7.4}
-\contentsline {section}{\numberline {7.5}Overall}{67}{section.7.5}
+\contentsline {section}{\numberline {7.4}Test Size}{67}{section.7.4}
+\contentsline {section}{\numberline {7.5}Low Score Comparisons}{67}{section.7.5}
+\contentsline {section}{\numberline {7.6}Overall}{68}{section.7.6}
 \contentsline {chapter}{\numberline {8}Future Implementation}{69}{chapter.8}
 \contentsline {chapter}{\numberline {9}Conclusion}{71}{chapter.9}
 \contentsline {chapter}{\numberline {A}Test Diagrams}{73}{appendix.A}

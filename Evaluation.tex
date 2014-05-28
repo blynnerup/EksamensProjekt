@@ -228,8 +228,10 @@ The next comparison to be looked at is the 6th comparison (article Ids \textit{e
 
 In figure ~\ref{SameContent} we can see all substrings found, there is only one that is greater or equal to the threshold, it is marked in the green box. So the LCS plot does not tell us much about what is going on here, other than there truly is little in common in terms of substrings. We must then have a look at the article texts in order to see if we can figure out the reason for the relative high Cosine score. The two article's text can be found in appendix ~\ref{JPPOLSameContent1} and ~\ref{JPPOLSameContent2}. When reading the articles, it is clear that the articles is about the same topic (Brazilian footballer Carlos Bledorn Verri ('Dunga')), but are written in two different ways. If this started out with being a duplicate it has been obfuscated heavily, and it would be impossible to tell if that would be the reason. We can however say that the article have the same content, topic wise. A high (or relative high) Cosine score combined with a low LCS score, can then indicate that the article comparison are about the same topic, but without much other relation. This is something that we need to consider, and will get back to later.
 
+The Cosine score is decent, indicating that some words are shared, the article show
+
 \subsubsection{Low Scoring Comparison}
-Finally for these sources an interesting case was found, when lowering the Cosine threshold to 0.1 (the results can be seen in the file: JYPPOL.xlsx). A comparison with the following scores was found ~\ref{JPPOLLowScoreMatch}. Both the Cosine and the LCS score for the longest article are really low. However looking at the LCS score for the short article a score of around 30\% is indicated. This would be a substantial part of the article that actually match the other article.
+Finally in these sources, an interesting case was found, when lowering the Cosine threshold to 0.1 (the results can be seen in the file: JYPPOL.xlsx). A comparison with the following scores was found ~\ref{JPPOLLowScoreMatch}. Both the Cosine and the LCS score for the longest article are really low. However looking at the LCS score for the short article a score of around 30\% is indicated. This would be a substantial part of the article that actually match the other article.
 
 \begin{table}
 \begin{center}
