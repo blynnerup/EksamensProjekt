@@ -1,20 +1,20 @@
 \chapter{General - Terms and Rules}
 
-I will in this chapter cover the essentials of the expressions and terms used throughout this thesis.
+This chapter covers the essentials of the expressions and terms used throughout this thesis.
 
 \section{Terms}
 
-As there is a lot of terms used in this thesis, a short introduction to the most used are in order.
+As there is a lot of terms used in this thesis related to the kind of job Infomedia is dealing with, a short introduction to the most used are in order.
 \begin{itemize}
-\item \textbf{Article:} For this thesis, a digital document containing the contents of a piece of news. Could originate from papers, magazines, TV or other forms of media. For this thesis a document corresponds to an article. Articles are in their electronic form stored at Infomedia as XML files, I will throughout this thesis only deal with the part of the XML files that contains data of value to me in this assignment. This being \textit{Tags} (see below), \textit{Headline}, \textit{Sub headline} and \textit{Article Text}.
-\item \textbf{Corpus:} From Latin meaning \textit{body}. In this thesis that describes the test set of articles being used a test set throughout my thesis.
+\item \textbf{Article:} For this thesis, a digital document containing the contents of a piece of news. Could originate from papers, magazines, TV or other forms of media. In this thesis a document corresponds to an article. Articles are in their electronic form stored at Infomedia as XML files, throughout this thesis we will only deal with the part of the XML files that contains data of value to this assignment. This being \textit{Tags} (see below), \textit{Headline}, \textit{Sub headline} and \textit{Article Text}. The XML file contains other data that will not be used for this thesis.
+\item \textbf{Corpus:} From Latin meaning \textit{body}. In this thesis that describes the test set of articles being used a test set throughout the thesis.
 \item \textbf{Monitoring:} In relation to the news monitoring (news surveillance) that Infomedia does, is the act of collecting news that holds information of value to our customers.
 \item \textbf{Tag:} Used in Ontology\footnote{\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}} to create words that describes the contents of an article.
-\item \textbf{Term:} Basically a word. A term will be something that can be searched for.
+\item \textbf{Term:} Basically a word or collection of words that describes an object (person, place, topic etcetera). A term will be something that can be searched for. A term can also be a collection of words
 \end{itemize}
 
 \section{Matching}
-I will in this thesis talk about false and true positives and negatives. A match will mean that two articles to some extend have the same content.
+In this thesis we will talk about false and true positives and negatives. A match will mean that two articles to some extend have the same content (or at least believed to have the same content).
 
 \begin{itemize}
 \item \textbf{False Positive:} When an algorithm wrongfully identifies two articles as a match.
@@ -25,28 +25,25 @@ I will in this thesis talk about false and true positives and negatives. A match
 
 
 \section{Duplicates}
-In this thesis I will often use the term 'duplicates' or 'match' about article comparisons. A duplication (match) can be an article that has been taken directly from a news feed and posted in a newspaper. Many local newspapers is owned by larger newspapers, and they will often receive articles from their owning paper. They will then print this in their own paper. Sometimes they will only use parts of the article and this will also be considered a duplicate for this thesis. As such duplication in this thesis is a way of describing how similar two articles are, rather than saying different papers are doing conscious fraud. That is a matter for another thesis.
+In this thesis the term 'duplicates' or 'match' about article comparisons is often used. A duplication (match) can be an article that has been taken directly from a news feed and posted in a newspaper. Many local newspapers is owned by larger newspapers, and they will often receive articles from their owning paper. They will then print this in their own paper. Sometimes they will only use parts of the article and this will also be considered a duplicate for this thesis. As such duplication in this thesis is a way of describing how similar two articles are, rather than saying different papers are doing conscious fraud. That is a matter for another thesis. 
 
 \subsection{Topic Matching}
-When looking at article matching, there is also the possibility of having articles score pretty well by the algorithms because they are dealing with the same topic. There are cases where the article have been heavily modified, and then there would be no basis to talk about duplication, then one could talk about topic matching. The article no longer contains the same phrases, but deals with the same topic.
+When looking at article matching, there is also the possibility of having articles score pretty well by the algorithms because they are dealing with the same topic, but have not been duplicated. There are cases where the article have been heavily modified, and then there would be no basis to talk about duplication, then one could talk about topic matching. The obfuscation could be done by purpose as to try and hide the fact that the article is a duplicate of another article. The article no longer contains the same phrases, but deals with the same topic.
 Of course two articles could describe the same topic, but never have been related to begin with. I will not try and dissect whether this is the case, only try and indicate when I find two articles that are dealing with the same topic, and mark them as such. 
 
 \subsection{Copyright}
 It is hard to talk about article duplicating without talking about copyrights. Although this thesis will not delve into whether something is duplicated as a part of a copyright infringement or not, it seems only reasonable to give pause for a moment to talk about what a copyright is, and how it would affect duplication.
 
+In Denmark the legal body dealing with copyright is the Ministry of Culture\footnote{\url{http://kum.dk/}}. The law covering copyrights is \textit{'Ophavsretsloven'}\footnote{\url{https://www.retsinformation.dk/Forms/r0710.aspx?id=129901}}. This law is aimed at protecting the rights of the person or company that is creating material and publishing it. As most laws goes, this one is incredible long and often not easy to read.
+
 I feel that this quote is fulfilling as to explaining the concept of \textit{'copyright'}, even if it is talking about a case that is ongoing in USA at the time, and copyright rules can vary from nation to nation.
 \begin{quote}
-A copyright is basically a legal protection for an original expression on a fixed medium. So a song on a record, words on a page, ballet steps written down, and paint on a canvas are all copyrightable things. A phone book is not copyrightable (it’s not original). A copyright only protects the expression and not the underlying idea. Marvel does not have a corner on men in mechanical suits who fight crime – they only have the particular expression of that idea in Iron Man comic books.
+A copyright is basically a legal protection for an original expression on a fixed medium. So a song on a record, words on a page, ballet steps written down, and paint on a canvas are all copyrightable things. A phone book is not copyrightable (it's not original). A copyright only protects the expression and not the underlying idea. Marvel does not have a corner on men in mechanical suits who fight crime – they only have the particular expression of that idea in Iron Man comic books.
 
 Confused? That's okay. Copyrights are pretty complex things. A lot of what can be copyrighted is figured out in court when people fight over it. The basic test that the court will pose in this case is “is the expression original? Does the potentially infringing work actually borrow from the original expression?” ~\cite{Copyright}
 \end{quote}
 
-So the whole concept is extremely fuzzy, and often the infringement part will have to be settled in court. In the recent years that have been a lot of debate in which university educated people have become accused of plagiarism  in relation to their doctoral or master thesis\footnote{\url{http://www.theguardian.com/world/2011/feb/16/german-defence-minister-plagiarism-accusation}}$^{,}$\footnote{\url{http://www.nytimes.com/2012/04/03/world/europe/hungarian-president-pal-schmitt-resigns-amid-plagiarism-scandal.html?_r=0}}. A hard topic to deal with in a fixed way, and to top it off, there is also the notion of \textit{"fair use"}\footnote{\url{http://www.umuc.edu/library/libhow/copyright.cfm\#fairuse_definition}}. Although there is no real fair use paragraph in Danish law, we instead have \textit{'låneregler'}\footnote{\url{http://da.wikipedia.org/wiki/Fair_use}}. 
+So the whole concept is extremely fuzzy, and often the infringement part will have to be settled in court. In the recent years there have been a lot of debate in which university educated people have become accused of plagiarism  in relation to their doctoral or master thesis\footnote{\url{http://www.theguardian.com/world/2011/feb/16/german-defence-minister-plagiarism-accusation}}$^{,}$\footnote{\url{http://www.nytimes.com/2012/04/03/world/europe/hungarian-president-pal-schmitt-resigns-amid-plagiarism-scandal.html?_r=0}}. A hard topic to deal with in a fixed way, and to top it off, there is also the notion of \textit{"fair use"}\footnote{\url{http://www.umuc.edu/library/libhow/copyright.cfm\#fairuse_definition}}. Although there is no real fair use paragraph in Danish law, we instead have \textit{'låneregler'}\footnote{\url{http://da.wikipedia.org/wiki/Fair_use}}. 
 
 In the world that Infomedia is dealing with, articles are also a target of duplication, and a lot of effort have begun being invested into this, as it can be a question about a lot of money if you fail to protect your copyrighted material. So the motivation in finding article duplicates can be two sided. First off, it creates a better overview for Infomedia's customers, secondly newspapers are very interested in finding out if their material is being used, unlicensed, in other media.
 
-
-
-
-Hvornår er en artikel et duplikat (korte artikler (breaking news), hvornår er to artikler "tilstrækkeligt" forskellige?)
-blah about copyright rules in Denmark...
