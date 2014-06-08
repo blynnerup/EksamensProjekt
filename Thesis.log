@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  8 JUN 2014 19:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.18)  8 JUN 2014 20:57
 entering extended mode
 **Thesis.tex
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Thesis.tex
@@ -721,7 +721,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 61.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=303, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=311, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
@@ -758,7 +758,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\Preface.tex
 [3] [4
 
-] <figures/SignatureDummy.jpg, id=338, 257.46187pt x 103.13531pt>
+] <figures/SignatureDummy.jpg, id=346, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
@@ -824,14 +824,14 @@ Chapter 3.
 
 
 
-] [10] <figures/SingleAlgoScore.jpg, id=563, 365.86688pt x 322.95656pt>
+] [10] <figures/SingleAlgoScore.jpg, id=573, 365.86688pt x 322.95656pt>
 File: figures/SingleAlgoScore.jpg Graphic file (type jpg)
 
 <use figures/SingleAlgoScore.jpg>
 Package pdftex.def Info: figures/SingleAlgoScore.jpg used on input line 31.
 (pdftex.def)             Requested size: 182.93298pt x 161.47787pt.
 
-<figures/MultipleAlgoScores.jpg, id=566, 810.77907pt x 323.70938pt>
+<figures/MultipleAlgoScores.jpg, id=576, 810.77907pt x 323.70938pt>
 File: figures/MultipleAlgoScores.jpg Graphic file (type jpg)
 
 <use figures/MultipleAlgoScores.jpg>
@@ -840,7 +840,7 @@ Package pdftex.def Info: figures/MultipleAlgoScores.jpg used on input line 39.
  [11 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/Single
 AlgoScore.jpg> <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figu
 res/MultipleAlgoScores.jpg>]
-<figures/SystemArchitecture.jpg, id=578, 639.13782pt x 527.72156pt>
+<figures/SystemArchitecture.jpg, id=588, 639.13782pt x 527.72156pt>
 File: figures/SystemArchitecture.jpg Graphic file (type jpg)
 
 <use figures/SystemArchitecture.jpg>
@@ -854,7 +854,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--53
 
 [12 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/SystemA
 rchitecture.jpg>] [13]
-<figures/LcsExplained.jpg, id=599, 434.37282pt x 151.3153pt>
+<figures/LcsExplained.jpg, id=609, 434.37282pt x 151.3153pt>
 File: figures/LcsExplained.jpg Graphic file (type jpg)
 
 <use figures/LcsExplained.jpg>
@@ -890,14 +890,14 @@ OML/cmm/m/it/8 :\T1/cmtt/m/n/8 org / wiki / Algorithm[]Implementation / Strings
  []
 
 [23] [24] [25] [26] [27]
-<figures/Datatypes.jpg, id=794, 271.76532pt x 179.16937pt>
+<figures/Datatypes.jpg, id=804, 271.76532pt x 179.16937pt>
 File: figures/Datatypes.jpg Graphic file (type jpg)
 
 <use figures/Datatypes.jpg>
 Package pdftex.def Info: figures/Datatypes.jpg used on input line 165.
 (pdftex.def)             Requested size: 190.23442pt x 125.4177pt.
 
-<figures/Dataflow.jpg, id=795, 72.27pt x 287.57437pt>
+<figures/Dataflow.jpg, id=805, 72.27pt x 287.57437pt>
 File: figures/Dataflow.jpg Graphic file (type jpg)
 
 <use figures/Dataflow.jpg>
@@ -912,7 +912,7 @@ res/Dataflow.jpg>]
 
 ]
 Chapter 5.
-[31] <figures/LcsExample.jpg, id=815, 805.50937pt x 347.79938pt>
+[31] <figures/LcsExample.jpg, id=825, 805.50937pt x 347.79938pt>
 File: figures/LcsExample.jpg Graphic file (type jpg)
 
 <use figures/LcsExample.jpg>
@@ -920,7 +920,7 @@ Package pdftex.def Info: figures/LcsExample.jpg used on input line 13.
 (pdftex.def)             Requested size: 322.19803pt x 139.11728pt.
  [32 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/LcsExa
 mple.jpg>]
-<figures/PerfectMatch.jpg, id=824, 947.03813pt x 490.83376pt>
+<figures/PerfectMatch.jpg, id=834, 947.03813pt x 490.83376pt>
 File: figures/PerfectMatch.jpg Graphic file (type jpg)
 
 <use figures/PerfectMatch.jpg>
@@ -928,7 +928,7 @@ Package pdftex.def Info: figures/PerfectMatch.jpg used on input line 28.
 (pdftex.def)             Requested size: 331.4683pt x 171.79439pt.
  [33 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/Perfec
 tMatch.jpg>]
-<figures/SubstringCollection.jpg, id=838, 911.65594pt x 693.34032pt>
+<figures/SubstringCollection.jpg, id=848, 911.65594pt x 693.34032pt>
 File: figures/SubstringCollection.jpg Graphic file (type jpg)
 
 <use figures/SubstringCollection.jpg>
@@ -941,21 +941,21 @@ Underfull \vbox (badness 2426) has occurred while \output is active []
  [34]
 [35 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/Substri
 ngCollection.jpg>]
-<figures/FractileNoise.jpg, id=852, 303.38344pt x 303.38344pt>
+<figures/FractileNoise.jpg, id=862, 303.38344pt x 303.38344pt>
 File: figures/FractileNoise.jpg Graphic file (type jpg)
 
 <use figures/FractileNoise.jpg>
 Package pdftex.def Info: figures/FractileNoise.jpg used on input line 56.
 (pdftex.def)             Requested size: 303.38269pt x 303.38269pt.
 
-<figures/FractileNoNoise.jpg, id=856, 303.38344pt x 303.38344pt>
+<figures/FractileNoNoise.jpg, id=866, 303.38344pt x 303.38344pt>
 File: figures/FractileNoNoise.jpg Graphic file (type jpg)
 
 <use figures/FractileNoNoise.jpg>
 Package pdftex.def Info: figures/FractileNoNoise.jpg used on input line 87.
 (pdftex.def)             Requested size: 303.38269pt x 303.38269pt.
 
-<figures/JVFLFractile.jpg, id=858, 303.38344pt x 303.38344pt>
+<figures/JVFLFractile.jpg, id=868, 303.38344pt x 303.38344pt>
 File: figures/JVFLFractile.jpg Graphic file (type jpg)
 
 <use figures/JVFLFractile.jpg>
@@ -969,7 +969,7 @@ Underfull \vbox (badness 1502) has occurred while \output is active []
 eNoise.jpg>] [38 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/fi
 gures/FractileNoNoise.jpg>] [39 <C:/Users/Brian.L.Pedersen/Documents/GitHub/Eks
 amensProjekt/figures/JVFLFractile.jpg>]
-<figures/AllFilesFractile.jpg, id=883, 303.38344pt x 303.38344pt>
+<figures/AllFilesFractile.jpg, id=893, 303.38344pt x 303.38344pt>
 File: figures/AllFilesFractile.jpg Graphic file (type jpg)
 
 <use figures/AllFilesFractile.jpg>
@@ -988,7 +988,7 @@ Chapter 6.
 
 
 ] [44] [45] [46]
-<figures/JPPOLScoreGraph.jpg, id=920, 1282.03969pt x 303.38344pt>
+<figures/JPPOLScoreGraph.jpg, id=930, 1282.03969pt x 303.38344pt>
 File: figures/JPPOLScoreGraph.jpg Graphic file (type jpg)
 
 <use figures/JPPOLScoreGraph.jpg>
@@ -996,14 +996,14 @@ Package pdftex.def Info: figures/JPPOLScoreGraph.jpg used on input line 65.
 (pdftex.def)             Requested size: 320.50914pt x 75.84567pt.
  [47 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/JPPOLS
 coreGraph.jpg>]
-<figures/JPPOLCosineLCSMax.jpg, id=930, 604.50844pt x 604.50844pt>
+<figures/JPPOLCosineLCSMax.jpg, id=940, 604.50844pt x 604.50844pt>
 File: figures/JPPOLCosineLCSMax.jpg Graphic file (type jpg)
 
 <use figures/JPPOLCosineLCSMax.jpg>
 Package pdftex.def Info: figures/JPPOLCosineLCSMax.jpg used on input line 78.
 (pdftex.def)             Requested size: 302.25348pt x 302.25348pt.
 
-<figures/JPPOLCosineLCSMin.jpg, id=931, 604.50844pt x 604.50844pt>
+<figures/JPPOLCosineLCSMin.jpg, id=941, 604.50844pt x 604.50844pt>
 File: figures/JPPOLCosineLCSMin.jpg Graphic file (type jpg)
 
 <use figures/JPPOLCosineLCSMin.jpg>
@@ -1012,7 +1012,7 @@ Package pdftex.def Info: figures/JPPOLCosineLCSMin.jpg used on input line 85.
  [48 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/JPPOLC
 osineLCSMax.jpg>] [49 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProje
 kt/figures/JPPOLCosineLCSMin.jpg>]
-<figures/e410559e.jpg, id=946, 863.47594pt x 283.0575pt>
+<figures/e410559e.jpg, id=956, 863.47594pt x 283.0575pt>
 File: figures/e410559e.jpg Graphic file (type jpg)
 
 <use figures/e410559e.jpg>
@@ -1022,14 +1022,14 @@ Package pdftex.def Info: figures/e410559e.jpg used on input line 131.
 Underfull \vbox (badness 1924) has occurred while \output is active []
 
  [50]
-<figures/e410559d.jpg, id=962, 942.52126pt x 328.22626pt>
+<figures/e410559d.jpg, id=972, 942.52126pt x 328.22626pt>
 File: figures/e410559d.jpg Graphic file (type jpg)
 
 <use figures/e410559d.jpg>
 Package pdftex.def Info: figures/e410559d.jpg used on input line 142.
 (pdftex.def)             Requested size: 329.88739pt x 114.8809pt.
 
-<figures/XmlIssue1.jpg, id=963, 706.13812pt x 49.68562pt>
+<figures/XmlIssue1.jpg, id=973, 706.13812pt x 49.68562pt>
 File: figures/XmlIssue1.jpg Graphic file (type jpg)
 
 <use figures/XmlIssue1.jpg>
@@ -1040,7 +1040,7 @@ Overfull \hbox (7.76555pt too wide) in paragraph at lines 149--150
  [][] 
  []
 
-<figures/XmlIssue2.jpg, id=966, 700.86844pt x 34.62938pt>
+<figures/XmlIssue2.jpg, id=976, 700.86844pt x 34.62938pt>
 File: figures/XmlIssue2.jpg Graphic file (type jpg)
 
 <use figures/XmlIssue2.jpg>
@@ -1056,14 +1056,14 @@ e.jpg>] [52 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures
 /e410559d.jpg> <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figu
 res/XmlIssue1.jpg> <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/
 figures/XmlIssue2.jpg>]
-<figures/XmlIssue3.jpg, id=987, 229.60782pt x 57.21375pt>
+<figures/XmlIssue3.jpg, id=997, 229.60782pt x 57.21375pt>
 File: figures/XmlIssue3.jpg Graphic file (type jpg)
 
 <use figures/XmlIssue3.jpg>
 Package pdftex.def Info: figures/XmlIssue3.jpg used on input line 165.
 (pdftex.def)             Requested size: 229.60725pt x 57.2136pt.
 
-<figures/XmlIssue4.jpg, id=988, 201.00093pt x 54.2025pt>
+<figures/XmlIssue4.jpg, id=998, 201.00093pt x 54.2025pt>
 File: figures/XmlIssue4.jpg Graphic file (type jpg)
 
 <use figures/XmlIssue4.jpg>
@@ -1072,14 +1072,14 @@ Package pdftex.def Info: figures/XmlIssue4.jpg used on input line 172.
  [53 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/XmlIss
 ue3.jpg> <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/Xm
 lIssue4.jpg>]
-<figures/e410557c.jpg, id=1000, 910.90312pt x 605.26125pt>
+<figures/e410557c.jpg, id=1010, 910.90312pt x 605.26125pt>
 File: figures/e410557c.jpg Graphic file (type jpg)
 
 <use figures/e410557c.jpg>
 Package pdftex.def Info: figures/e410557c.jpg used on input line 199.
 (pdftex.def)             Requested size: 273.27304pt x 181.57976pt.
 
-<figures/e410549c.jpg, id=1002, 943.27406pt x 584.93532pt>
+<figures/e410549c.jpg, id=1012, 943.27406pt x 584.93532pt>
 File: figures/e410549c.jpg Graphic file (type jpg)
 
 <use figures/e410549c.jpg>
@@ -1091,7 +1091,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [54]
 [55 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/e410557
 c.jpg> <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/e410
-549c.jpg>] [56] <figures/LengthIssue.jpg, id=1023, 898.85812pt x 76.03406pt>
+549c.jpg>] [56] <figures/LengthIssue.jpg, id=1033, 898.85812pt x 76.03406pt>
 File: figures/LengthIssue.jpg Graphic file (type jpg)
 
 <use figures/LengthIssue.jpg>
@@ -1099,7 +1099,7 @@ Package pdftex.def Info: figures/LengthIssue.jpg used on input line 256.
 (pdftex.def)             Requested size: 341.56963pt x 28.89323pt.
  [57 <C:/Users/Brian.L.Pedersen/Documents/GitHub/EksamensProjekt/figures/Length
 Issue.jpg>]
-<figures/Over.jpg, id=1033, 941.76843pt x 438.13687pt>
+<figures/Over.jpg, id=1043, 941.76843pt x 438.13687pt>
 File: figures/Over.jpg Graphic file (type jpg)
  <use figures/Over.jpg>
 Package pdftex.def Info: figures/Over.jpg used on input line 299.
@@ -1118,10 +1118,10 @@ Chapter 7.
 
 
 
-] [66])
+] [66]
 Underfull \vbox (badness 2772) has occurred while \output is active []
 
- [67]
+ [67])
 [68]
 (C:\Users\Brian.L.Pedersen\Documents\GitHub\EksamensProjekt\FutureImplementatio
 n.tex
@@ -1219,7 +1219,7 @@ File: figures/e410559e.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/e410559e.jpg used on input line 13.
 (pdftex.def)             Requested size: 431.73691pt x 141.5284pt.
 
-<figures/JV-LemvigScoreGraph.jpg, id=1248, 1282.03969pt x 303.38344pt>
+<figures/JV-LemvigScoreGraph.jpg, id=1258, 1282.03969pt x 303.38344pt>
 File: figures/JV-LemvigScoreGraph.jpg Graphic file (type jpg)
 
 <use figures/JV-LemvigScoreGraph.jpg>
@@ -1324,14 +1324,14 @@ aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 448AB6854B716C5B2884D0984E282EFD;5213.
+(rerunfilecheck)             Checksum: B6B1985C7F91375C0DDB98D5C21251AD;5362.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 11343 strings out of 493921
- 166835 string characters out of 3144842
- 282932 words of memory out of 3000000
- 13873 multiletter control sequences out of 15000+200000
+ 11346 strings out of 493921
+ 166876 string characters out of 3144842
+ 282935 words of memory out of 3000000
+ 13874 multiletter control sequences out of 15000+200000
  34358 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,12n,49p,2238b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1364,9 +1364,9 @@ pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Thesis.pdf (106 pages, 2795236 bytes).
+Output written on Thesis.pdf (106 pages, 2798767 bytes).
 PDF statistics:
- 2184 PDF objects out of 2487 (max. 8388607)
- 436 named destinations out of 1000 (max. 500000)
- 746 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2193 PDF objects out of 2487 (max. 8388607)
+ 438 named destinations out of 1000 (max. 500000)
+ 762 words of extra memory for PDF output out of 10000 (max. 10000000)
 

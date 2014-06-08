@@ -62,8 +62,10 @@
 \contentsline {section}{\numberline {7.3}Score Evaluation}{66}{section.7.3}
 \contentsline {section}{\numberline {7.4}Test Size}{67}{section.7.4}
 \contentsline {section}{\numberline {7.5}Low Score Comparisons}{67}{section.7.5}
-\contentsline {section}{\numberline {7.6}Overall}{68}{section.7.6}
+\contentsline {section}{\numberline {7.6}The Issue of Matches}{68}{section.7.6}
+\contentsline {section}{\numberline {7.7}Overall}{68}{section.7.7}
 \contentsline {chapter}{\numberline {8}Future Implementation}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Presentation to the Clients}{70}{section.8.1}
 \contentsline {chapter}{\numberline {9}Conclusion}{71}{chapter.9}
 \contentsline {chapter}{\numberline {A}Test Diagrams}{73}{appendix.A}
 \contentsline {chapter}{\numberline {B}Article Content}{77}{appendix.B}
