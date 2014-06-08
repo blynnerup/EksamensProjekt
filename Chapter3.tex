@@ -41,9 +41,11 @@ The essential thing in this, is to ensure that the various algorithms works in d
 	\label{MultipleAlgo}
 \end{figure}
 
-The idea is that the algorithms should do 99.9\% of the work in identifying article duplicates, and then have the  last 0.1\% be verified by humans. This is already how things are working at Infomedia, but only with one algorithm at the moment. My work will the be the first algorithm to do a check of the work done by the already implemented algorithm. This will hopefully narrow the field of possible article duplicates that has to be verified by human eyes.
+The idea is that the algorithms should do 99.9\% of the work in identifying article duplicates, and then have the  last 0.1\% be verified by humans. The work done in this thesis will the be the first algorithm to do a check of the results given by the already implemented algorithm. This will hopefully narrow the field of possible article duplicates that has to be verified by human eyes.
 
-The system would then ideally work as follows.
+Of course when implementing these algorithms, it should be of high priority that they do not affirms a false positive result given from one to another algorithm. This problem would (ideally) be reduced by the number of articles doing text matching. So to reduce the number of false positive results, it is vital to do testing (manually checking results) in the early stages of the project, and to accept scores rather too cautiously and then missing a few matches than to accept too many that is false positive.
+
+The system would then ideally work as shown in figure\ref{Architecture}.
 
 \begin{figure}[h]
 	\centering
@@ -61,11 +63,20 @@ The task of my thesis is to create a secondary algorithm (one of the slower ones
 
 Once the word map is created, the articles are then scored. The way that this is done, is that the algorithm compares two article's vectors with each other and then returns a score based on the cosine angle between the two article vectors. This is done one article comparison at a time (although done with parallel coding to speed up the process). As the word map is generated each time the algorithm is run, the word map can (and probably will) differ from each run (if the corpus of articles are being changed). Infomedia is therefore talking about implementing this bit differently, and building a constant word map, that only gets updated with each run, not overwritten. This will ensure that common words will always have a short vector.
 
-The algorithm then returns a list of article comparisons (based on a threshold set by the user), with article ID\footnote{Each article has their own unique ID.} and scores. So each comparison has the ID of \textit{"article 1"} and \textit{"article 2"} and their score (the angle between the two vectors, in a multidimensional universe). The closer the score is to the value 1.0 the more similar are two articles. A score of 0.0 indicates that two articles has nothing in common (according to this algorithm, I will discuss this point in the next paragraph), whereas a score of 1.0 indicates two perfectly identical articles (according to this algorithm). This algorithm and it has a good O-notation (O(log N)).
+The algorithm then returns a list of article comparisons (based on a threshold set by the user), with article ID\footnote{Each article has their own unique ID.} and scores. So each comparison has the ID of \textit{"article 1"} and \textit{"article 2"} and their score (the angle between the two vectors, in a multidimensional universe). The closer the score is to the value 1.0 the more similar are two articles. A score of 0.0 indicates that two articles has nothing in common (according to this algorithm, I will discuss this point in the next paragraph), whereas a score of 1.0 indicates two perfectly identical articles (according to this algorithm). This algorithm has a good O-notation (O(log N)).
 
 \textbf{Problem:} \label{CosineProblem} This string comparison is very sensitive to articles containing many of the same words, for instance "A man walks his dog in the park" and "A dog walks his man in the park" would result in returning a cosine value of 1.0, due to the way the algorithm works. The two strings are clearly different, but the words in each string is the same, therefore the Cosine algorithm will find them to be identical. This problem is very unlikely to yield false positives.
 
-\textbf{Longest Common Substring (LCS)}, compares documents in pairs. A general implementation would be to have a list of documents and then compare a document to every other document in the list. The algorithm will then return the length of the longest common substring. By default the LCS algorithm\cite{WikiLCS} checks the contents of a string character by character against another string. When initialized, the algorithm creates an double array and each time a match is found (when two identical characters are found ('a' and 'a' for instance)) the algorithm marks that in the array by adding a number. It then checks if this substring is longer than what has previous been found, if so, it discards the old substring and keeps the newly found.
+\textbf{Longest Common Substring (LCS)}, compares documents in pairs. This is the algorithms chosen to be implemented in this project. It is chosen for a number of reasons. 
+
+\begin{itemize}
+	\item It is an algorithm used for text analysis (text matching and comparison).
+	\item It uses a different approach to text comparison than Cosine, which is what we want\ref{MultipleAlgo}.
+	\item The algorithm is free to use and it is documented on the web.
+	\item The algorithm performs slower than Cosine, so it would be well suited into the second group of algorithms to check the results found by the initial analysis.
+\end{itemize}
+
+ A general implementation would be to have a list of documents and then compare a document to every other document in the list. The algorithm will then return the length of the longest common substring. By default the LCS algorithm\cite{WikiLCS} checks the contents of a string character by character against another string. When initialized, the algorithm creates an double array and each time a match is found (when two identical characters are found ('a' and 'a' for instance)) the algorithm marks that in the array by adding a number. It then checks if this substring is longer than what has previous been found, if so, it discards the old substring and keeps the newly found.
 
 \begin{figure}[h]
 	\centering
@@ -78,6 +89,21 @@ I will use the basic implementation of this algorithm in my thesis, I will then 
 
 \textbf{Problem:} This algorithm is very prone to fail in cases where there have been made alterations to the article in question. A word change in the middle of one of two otherwise identical articles will result in a ~50 \% match. If the article in question have been obfuscated with many changed words, the LCS will be extremely short. This is a high risk problem, as article duplication will often involve changing words. This algorithm is also substantially slower than the Cosine algorithm, having an O-notation of O(n*m). Ideally this algorithm is therefore best used on a selection of articles, rather than on the entire corpus.
 
+\section{Creating an Algorithm from Scratch}
+The option of creating a unique algorithm for this project was also mentioned. To do this one would have to consider the following.
+
+\begin{itemize}
+	\item The new algorithm should bring something new to to the table (not doing what the others are already doing).
+	\item It should perform well enough that the algorithm would terminate within a reasonable amount of time. If it takes more than a day to do analysis of the articles in the inflow, the algorithm would start to queue up work.
+\end{itemize}
+
+For this, the option to create an algorithm that would work in relation with the text enhancement that Infomedia does when article are processed in the inflow, \textit{Semaphore Tagging}.
+
+\subsection{Semaphore Tagging}
+When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of the article, an article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology (\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}) team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. A tag also has relations to other tags. A politician would be tagged with politics, political party, other people in politics that are in some way associated with that person. The tag is also enriched with a score, that is based on the relevance for that tag in that given article. So if a politician is the main focus of an article, the name of that politician is high than if the article deals with something that the politician only have a remote connection to. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
+
+\subsection{Cons to Semaphore}
+As these tags are more of a general indicator to an articles' contents than an actual text matching algorithm, it will provide very little value as a stand alone implementation. Each article will only contain tags for the terms, for which the ontology team has created semantic rules for. If 100 articles all contained various doings of a minister (picking up the children, going to meetings, being involved in a crisis) many of the same tags would be present in the 100 articles, this could be the ministers name, political party and other general tags that are linked to this minister. It would therefore be hard to decipher much information that could truly and uniquely link two articles together just by doing this. However this could be used to enhance another algorithm (for instance one of the two mentioned above). If the articles compared contains the same tags, they are likely to have some sort of relevance to each other, and if the tags also have matching scores, that would strengthen the possibility of a match. I will not look any further into implementing this algorithm in this thesis, as this approach is not ideal in providing a definite result.
 
 \section{Optimizing Performance}
 \subsection{Stop Words}
@@ -88,7 +114,7 @@ We can safely (with respects to the previously addressed problem) remove stop wo
 For the cosine algorithm removal of stop words would improve performance, by reducing the size of the \textit{Magnitude Vector}. 
 
 \subsubsection{LCS}
-In regards to the LCS algorithm, the performance would also be improved, as the algorithm wouldn't need to traverse as many characters. This would reduce the length of the longest common substring, but it would be unlikely that it would affect the outcome of the algorithm, as stop words are rarely changed when duplicating articles.
+In regards to the LCS algorithm, the performance would also be improved, as the algorithm would not need to traverse as many characters. This would reduce the length of the longest common substring, but it would be unlikely that it would affect the outcome of the algorithm, as stop words are rarely changed when duplicating articles.
 
 \subsection{Stemming}
 \textit{Stemming}\footnote{\url{http://en.wikipedia.org/wiki/Stemming}} Stemming is the act of conjugating a word to the base form (Danish:\textit{'Grundform'}). It is done in order to reduce the amount of noise in a text. Words will then be conjugated and instead of having the same word represented several time in different conjugations they will all be noted as the same word. Stemming does not ruin the semantic content of the text.
@@ -98,12 +124,6 @@ Stemming improves the performance of the cosine algorithm as this will reduce th
 
 \subsubsection{LCS}
 Stemming would not improve the performance of the LCS algorithm by much. As this algorithm matches characters one by one, it would make little difference if the words are stemmed or not. As the 'Grundform' is the shortest form of a word in Danish, it will make a slight difference, but this is hardly worth noting.
-
-\section{Semaphore Tagging}
-Another way of finding duplicates is by looking at each articles semaphore tags. When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of the article, an article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology (\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}) team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. A tag also has relations to other tags. A politician would be tagged with politics, political party, other people in politics that are in some way associated with that person. The tag is also enriched with a score, that is based on the relevance for that tag in that given article. So if a politician is the main focus of an article, the name of that politician is high than if the article deals with something that the politician only have a remote connection to. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
-
-\subsection{Cons to Semaphore}
-As these tags are more of a general indicator to an articles' contents than an actual text matching algorithm, it will provide very little value as a stand alone implementation. Each article will only contain tags for the terms, for which the ontology team has created semantic rules for. If 100 articles all contained various doings of a minister (picking up the children, going to meetings, being involved in a crisis) many of the same tags would be present in the 100 articles, this could be the ministers name, political party and other general tags that are linked to this minister. It would therefore be hard to decipher much information that could truly and uniquely link two articles together just by doing this. However this could be used to enhance another algorithm (for instance one of the two mentioned above). If the articles compared contains the same tags, they are likely to have some sort of relevance to each other, and if the tags also have matching scores, that would strengthen the possibility of a match. I will not look any further into implementing this algorithm in this thesis, as this approach is difficult in providing a definite result.
 
 \section{Text Preparation}
 \label{TextPrep}
@@ -129,9 +149,12 @@ Stemming is another good way of normalizing text, I have already covered this to
 
 Stop words will reduce the number of words in an article, and with less words, there are less error margin in terms of spelling errors, also less words in the article text means less words that has to be analysed. As stop words have little meaning when trying to figure out if two articles match, it is a good idea to remove these in order to improve performance. 
 
-Unfortunately due to the time limit of this thesis, I will not be able to look into any of text the preparations mentioned, but wanted to describe what should be kept in mind, when implementing this project into Infomedia's inflow.
+Unfortunately due to the time limit of this thesis, there will not be time to look into any of text the preparations mentioned, but it was relevant to describe what should be kept in mind, when implementing this project into Infomedia's inflow.
 
 Finally it is important that all files are stored with the same encoding\footnote{\url{http://en.wikipedia.org/wiki/Character_encoding}}, as different encoding could cause havoc in the systems ability to read the text in the files. This is already done in the system, so I will not worry about this factor in my thesis.
+
+\section{Preprocessing}
+Doing the text preparation mentioned in the last two sections should be task implemented before any algorithm would analyse the text. It would not be a difficult task, though it would require some time to implement them correctly and test that it is working properly.
 
 \section{Technology}
 As the inflow system at Infomedia is created in C$^\sharp$, it is the easy (and logical) choice to create my work in C$^\sharp$ as well. This would help integrating my work into the existing systems without too much trouble. I am using Visual Studio 2013 and .NET version 4.5 for my code development, which is provided to me by Infomedia. I am using Infomedias Team Foundation Server (TFS) for version control. 

@@ -11,7 +11,7 @@
 \contentsline {chapter}{\numberline {2}General - Terms and Rules}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Terms}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Matching}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Duplicates}{6}{section.2.3}
+\contentsline {section}{\numberline {2.3}Duplicates}{7}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Topic Matching}{7}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Copyright}{7}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Analysis}{9}{chapter.3}
@@ -20,17 +20,19 @@
 \contentsline {section}{\numberline {3.2}Initial Considerations}{10}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}System Architecture}{10}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Algorithms Used}{13}{section.3.3}
-\contentsline {section}{\numberline {3.4}Optimizing Performance}{15}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Stop Words}{15}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Cosine}{15}{subsubsection.3.4.1.1}
-\contentsline {subsubsection}{\numberline {3.4.1.2}LCS}{15}{subsubsection.3.4.1.2}
-\contentsline {subsection}{\numberline {3.4.2}Stemming}{15}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}Cosine}{16}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}LCS}{16}{subsubsection.3.4.2.2}
-\contentsline {section}{\numberline {3.5}Semaphore Tagging}{16}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Cons to Semaphore}{17}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Text Preparation}{17}{section.3.6}
-\contentsline {section}{\numberline {3.7}Technology}{19}{section.3.7}
+\contentsline {section}{\numberline {3.4}Creating an Algorithm from Scratch}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Semaphore Tagging}{15}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Cons to Semaphore}{16}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Optimizing Performance}{16}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Stop Words}{16}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Cosine}{17}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}LCS}{17}{subsubsection.3.5.1.2}
+\contentsline {subsection}{\numberline {3.5.2}Stemming}{17}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Cosine}{17}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}LCS}{18}{subsubsection.3.5.2.2}
+\contentsline {section}{\numberline {3.6}Text Preparation}{18}{section.3.6}
+\contentsline {section}{\numberline {3.7}Preprocessing}{20}{section.3.7}
+\contentsline {section}{\numberline {3.8}Technology}{20}{section.3.8}
 \contentsline {chapter}{\numberline {4}Implementation}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Basic LCS Implementation}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}Modification of LCS - String Comparison}{23}{section.4.2}
