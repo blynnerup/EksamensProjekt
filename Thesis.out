@@ -18,7 +18,7 @@
 \BOOKMARK [1][]{section.3.2}{3.2 Initial Considerations}{chapter.3}% 18
 \BOOKMARK [2][]{subsection.3.2.1}{3.2.1 System Architecture}{section.3.2}% 19
 \BOOKMARK [1][]{section.3.3}{3.3 Algorithms Used}{chapter.3}% 20
-\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Term Frequency - Inverse Document FrequencyWikiTFIDF \(Cosine\)}{section.3.3}% 21
+\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Term Frequency - Inverse Document Frequency}{section.3.3}% 21
 \BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Longest Common Substring \(LCS\)}{section.3.3}% 22
 \BOOKMARK [1][]{section.3.4}{3.4 Creating an Algorithm from Scratch}{chapter.3}% 23
 \BOOKMARK [2][]{subsection.3.4.1}{3.4.1 Semaphore Tagging}{section.3.4}% 24
@@ -76,3 +76,4 @@
 \BOOKMARK [1][]{section.B.10}{B.10 Forskningsaftale til 859 millioner kroner er p\345 plads \0432}{appendix.B}% 76
 \BOOKMARK [0][]{appendix.C}{C Data Diagrams}{}% 77
 \BOOKMARK [0][]{appendix.D}{D Evaluation Diagrams}{}% 78
+\BOOKMARK [0][]{figure.caption.50}{Bibliography}{}% 79

@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {3.2}Initial Considerations}{10}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}System Architecture}{10}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Algorithms Used}{13}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Term Frequency - Inverse Document Frequency\cite {WikiTFIDF} (Cosine)}{13}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Term Frequency - Inverse Document Frequency}{13}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Longest Common Substring (LCS)}{14}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Creating an Algorithm from Scratch}{15}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Semaphore Tagging}{16}{subsection.3.4.1}
@@ -83,3 +83,4 @@
 \contentsline {section}{\numberline {B.10}Forskningsaftale til 859 millioner kroner er p\IeC {\r a} plads \#2}{82}{section.B.10}
 \contentsline {chapter}{\numberline {C}Data Diagrams}{83}{appendix.C}
 \contentsline {chapter}{\numberline {D}Evaluation Diagrams}{87}{appendix.D}
+\contentsline {chapter}{Bibliography}{91}{figure.caption.50}
