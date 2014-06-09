@@ -11,18 +11,18 @@ The algorithms should be able to live up to the following demands:
 \begin{itemize}
 	\item The algorithm should be able to work with text.
 	\item Performance (run time) is of secondary importance, but should have good accuracy (performance < accuracy).
-	\item The algorithm shall be able to return a score based on how identical two articles are.
+	\item The algorithm must be able to return a score based on how identical two articles are.
 	\item The algorithm should be focused on doing one thing only (not try to do several forms of text comparisons).
-	\item The algorithm shall be available in an open source version, or free to use licence.
+	\item The algorithm must be available in an open source version, or free to use licence.
 \end{itemize}
 
 \section{Initial Considerations}
-Infomedia already have an algorithm implemented in the inflow to make a rough comparison of the articles coming in. How ever, the thought is that a combination of several algorithms would provide a better and more granular view of the articles as they are being compared. A new algorithm should be one that was specialized in text matching. It should also be an algorithm that would work in different manner than what Infomedia already have implemented\footnote{More on the algorithm already implemented in the next section.}, as having two algorithms that work in more or less the same fashion would not produce results of much interest.
+Infomedia already have an algorithm implemented in the inflow to make a rough comparison of the articles coming in. However, the thought is that a combination of several algorithms would provide a better and more granular view of the articles as they are being compared. A new algorithm should be one that was specialized in text matching. It should also be an algorithm that would work in different manner than what Infomedia already have implemented\footnote{More on the algorithm already implemented in the next section.}, as having two algorithms that work in more or less the same fashion would not produce results of much interest.
 
 As the current implementation is rather fast, it could prove useful to have the algorithm that is already implemented, do the initial rough split of matches and no matches, and then have a slower (but more thorough) algorithm look at the \textit{interesting} article comparisons. Initially I have looked at two algorithms to fill this need, \textit{Longest Common Substring} and \textit{Semaphore Tag Matching} - an algorithm I would make from scratch.
 
 \subsection{System Architecture}
-As mentioned the various algorithms should work in different ways, meaning they should have various ways. This is to ensure a balanced image of how much an article comparison is actually a match. The thought is, that instead of having a few algorithm having to have many focus areas. It is better to have many that only focus on one thing, then combine their scores into a broad representation of how similar two articles is.
+As mentioned the various algorithms should work in different ways, meaning they should have various different ways of doing text comparisons. This is to ensure a balanced image of how much an article comparison is actually a match. The thought is, that instead of having a few algorithm having to have many focus areas. It is better to have many that only focus on one thing, then combine their scores into a broad representation of how similar two articles is.
 
 \pagebreak
 
@@ -32,7 +32,7 @@ As mentioned the various algorithms should work in different ways, meaning they 
 	\caption{Variation between how a single algorithm might score an article comparison, and how the actual score should be\cite{Slides}.}
 \end{figure}
 
-The essential thing in this, is to ensure that the various algorithms works in different ways. If one were to use many algorithms that all focused on the same way of doing text comparisons, the results would not provide that broad image of scores that is wanted for a more accurate score representation.
+The essential thing in this is to ensure that the various algorithms works in different ways. If one were to use many algorithms that all focused on the same way of doing text comparisons, the results would not provide that broad image of scores that is wanted for a more accurate score representation.
 
 \begin{figure}
 	\centering
@@ -41,7 +41,7 @@ The essential thing in this, is to ensure that the various algorithms works in d
 	\label{MultipleAlgo}
 \end{figure}
 
-The idea is that the algorithms should do 99.9\% of the work in identifying article duplicates, and then have the  last 0.1\% be verified by humans. The work done in this thesis will the be the first algorithm to do a check of the results given by the already implemented algorithm. This will hopefully narrow the field of possible article duplicates that has to be verified by human eyes.
+The idea is that the algorithms should do 99.9\% of the work in identifying article duplicates, and then have the  last 0.1\% be verified by humans. The work done in this thesis will be to implement the first algorithm to do a check of the results given by the already implemented algorithm. This will hopefully narrow the field of possible article duplicates that has to be verified by human eyes.
 
 Of course when implementing these algorithms, it should be of high priority that they do not affirms a false positive result given from one to another algorithm. This problem would (ideally) be reduced by the number of articles doing text matching. So to reduce the number of false positive results, it is vital to do testing (manually checking results) in the early stages of the project, and to accept scores rather too cautiously and then missing a few matches than to accept too many that is false positive.
 
@@ -59,7 +59,7 @@ The task of my thesis is to create a secondary algorithm (one of the slower ones
 
 \section{Algorithms Used}
 
-\textbf{Term Frequency - Inverse Document Frequency\cite{WikiTFIDF} (Cosine)}, generates a vector from each document. \textbf{I will not cover this algorithm in detail, as I have not done any work on it, only used some of the methods in it for my thesis.} This is the algorithm already implemented in the inflow today (a modified version of it, that is based on the Vector Space Model\footnote{\url{http://en.wikipedia.org/wiki/Vector_space_model}}). Each word in every article is added to a \textit{word map} which contains all the words of all articles in the corpus being checked (which also is used to create the document vector). The word map is used to generate a weight of each word (a word occurring in many articles will have less weight than a word that is only present in a few articles). Each word generates a bit of the articles total vector, a word that occurs in all documents will have a very short vector, a more rare word will have a longer (and therefore weigh heavier) in the article vector.
+\subsection{Term Frequency - Inverse Document Frequency} The Term Frequency - Inverse Document Frequency (Cosine) generates a vector from each document\cite{WikiTFIDF} based on the words in the document. I will not cover this algorithm in detail, as I have not done any work on it, only used some of the methods in it for my thesis. This is the algorithm already implemented in the inflow today (a modified version of it, that is based on the Vector Space Model\footnote{\url{http://en.wikipedia.org/wiki/Vector_space_model}}). Each word in every article is added to a \textit{word map} which contains all the words of all articles in the corpus being checked (which also is used to create the document vector). The word map is used to generate a weight of each word (a word occurring in many articles will have less weight than a word that is only present in a few articles). Each word generates a bit of the articles total vector, a word that occurs in all documents will have a very short vector, a more rare word will have a longer (and therefore weigh heavier) in the article vector.
 
 Once the word map is created, the articles are then scored. The way that this is done, is that the algorithm compares two article's vectors with each other and then returns a score based on the cosine angle between the two article vectors. This is done one article comparison at a time (although done with parallel coding to speed up the process). As the word map is generated each time the algorithm is run, the word map can (and probably will) differ from each run (if the corpus of articles are being changed). Infomedia is therefore talking about implementing this bit differently, and building a constant word map, that only gets updated with each run, not overwritten. This will ensure that common words will always have a short vector.
 
@@ -67,7 +67,7 @@ The algorithm then returns a list of article comparisons (based on a threshold s
 
 \textbf{Problem:} \label{CosineProblem} This string comparison is very sensitive to articles containing many of the same words, for instance "A man walks his dog in the park" and "A dog walks his man in the park" would result in returning a cosine value of 1.0, due to the way the algorithm works. The two strings are clearly different, but the words in each string is the same, therefore the Cosine algorithm will find them to be identical. This problem is very unlikely to yield false positives.
 
-\textbf{Longest Common Substring (LCS)}, compares documents in pairs. This is the algorithms chosen to be implemented in this project. It is chosen for a number of reasons. 
+\subsection{Longest Common Substring (LCS)}, compares documents in pairs. This is the algorithms chosen to be implemented in this project. It is chosen for a number of reasons. 
 
 \begin{itemize}
 	\item It is an algorithm used for text analysis (text matching and comparison).
@@ -97,10 +97,10 @@ The option of creating a unique algorithm for this project was also mentioned. T
 	\item It should perform well enough that the algorithm would terminate within a reasonable amount of time. If it takes more than a day to do analysis of the articles in the inflow, the algorithm would start to queue up work.
 \end{itemize}
 
-For this, the option to create an algorithm that would work in relation with the text enhancement that Infomedia does when article are processed in the inflow, \textit{Semaphore Tagging}.
+For this, the option to create an algorithm that would work in relation with the text enhancement that Infomedia does when articles are processed in the inflow, could be an algorithm based on \textit{Semaphore Tagging}.
 
 \subsection{Semaphore Tagging}
-When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of the article, an article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology (\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}) team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. A tag also has relations to other tags. A politician would be tagged with politics, political party, other people in politics that are in some way associated with that person. The tag is also enriched with a score, that is based on the relevance for that tag in that given article. So if a politician is the main focus of an article, the name of that politician is high than if the article deals with something that the politician only have a remote connection to. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
+When Infomedia receives articles in the inflow, these articles are enriched with \textit{Semaphore Tags}\footnote{Semaphore tags are tags that describes the contents of an article. An article about financial fraud would contain the tag \textit{Economic Crime}. These tags are created by the Infomedia Ontology (\url{http://en.wikipedia.org/wiki/Ontology_(information_science)}) team. They are creating rules for when a certain word (or words) appear in certain context, then an article will be tagged with a certain semaphore tag.}. A tag also has relations to other tags. A politician would be tagged with politics, political party, other people in politics that are in some way associated with that person. The tag is also enriched with a score, that is based on the relevance for that tag in that given article. So if a politician is the main focus of an article, the name of that politician is high than if the article deals with something that the politician only have a remote connection to. Each article then gets a number of tags based on what terms are found in the article. A way of finding article duplicates could be through creating an algorithm that would check a pair of articles with their respective semaphore tags.
 
 \subsection{Cons to Semaphore}
 As these tags are more of a general indicator to an articles' contents than an actual text matching algorithm, it will provide very little value as a stand alone implementation. Each article will only contain tags for the terms, for which the ontology team has created semantic rules for. If 100 articles all contained various doings of a minister (picking up the children, going to meetings, being involved in a crisis) many of the same tags would be present in the 100 articles, this could be the ministers name, political party and other general tags that are linked to this minister. It would therefore be hard to decipher much information that could truly and uniquely link two articles together just by doing this. However this could be used to enhance another algorithm (for instance one of the two mentioned above). If the articles compared contains the same tags, they are likely to have some sort of relevance to each other, and if the tags also have matching scores, that would strengthen the possibility of a match. I will not look any further into implementing this algorithm in this thesis, as this approach is not ideal in providing a definite result.
@@ -117,7 +117,7 @@ For the cosine algorithm removal of stop words would improve performance, by red
 In regards to the LCS algorithm, the performance would also be improved, as the algorithm would not need to traverse as many characters. This would reduce the length of the longest common substring, but it would be unlikely that it would affect the outcome of the algorithm, as stop words are rarely changed when duplicating articles.
 
 \subsection{Stemming}
-\textit{Stemming}\footnote{\url{http://en.wikipedia.org/wiki/Stemming}} Stemming is the act of conjugating a word to the base form (Danish:\textit{'Grundform'}). It is done in order to reduce the amount of noise in a text. Words will then be conjugated and instead of having the same word represented several time in different conjugations they will all be noted as the same word. Stemming does not ruin the semantic content of the text.
+\textit{Stemming}\footnote{\url{http://en.wikipedia.org/wiki/Stemming}} is the act of conjugating a word to the base form (Danish:\textit{'Grundform'}). It is done in order to reduce the amount of noise in a text. Words will then be conjugated and instead of having the same word represented several time in different conjugations they will all be noted as the same word. Stemming does not ruin the semantic content of the text.
 
 \subsubsection{Cosine}
 Stemming improves the performance of the cosine algorithm as this will reduce the number of words in the \textit{vector space}. As words would be reduced to their base form (Danish:\textit{Grundform}), words used several times, but with different endings would be counted as the same word. When using weighed evaluation this would actually improve performance to some extend. It can have a slight impact of the Cosine algorithm. This is because that without stemming the same word can occur several times in a text in different conjugations, and thus each conjugation would have a larger vector than when the conjugations are all counted as the same word. This impact will be minimal because the rare words are still occurring less often than normal words (stop words).
@@ -125,9 +125,11 @@ Stemming improves the performance of the cosine algorithm as this will reduce th
 \subsubsection{LCS}
 Stemming would not improve the performance of the LCS algorithm by much. As this algorithm matches characters one by one, it would make little difference if the words are stemmed or not. As the 'Grundform' is the shortest form of a word in Danish, it will make a slight difference, but this is hardly worth noting.
 
+One should note that it could be possible to have an article score better than it should while using stemming in the LCS. This is because when the conjugation of words are normalized, LCS will hit on words that would perhaps normally not match. However as we would remove stop words as well, this would be of little concern.
+
 \section{Text Preparation}
 \label{TextPrep}
-To reduce the chance of the algorithms failing in detecting duplicates, the text should be 'normalized'. As there are quite a few pitfalls in text analysis, one should try and take as many precautions as possible. A common source of error is common spelling errors, I will not check my article for spelling errors. These can have a rather big impact on the LCS algorithm. However as all text editors today have spell checking, this will be a tiny error source.
+To reduce the chance of the algorithms failing in detecting duplicates, the text should be 'normalized'. As there are quite a few pitfalls in text analysis, one should try and take as many precautions as possible. A common source of error is spelling errors, but there will not be done any checks in the articles for spelling errors. These can have a rather big impact on the LCS algorithm. However as all text editors today have spell checking, this will be a tiny error source.
 
 As the focus of this thesis have been on proving the thesis statement, there has been done no text preparation other than what is already implemented.
 
